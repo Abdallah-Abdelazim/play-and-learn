@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="250.0" prefWidth="350.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1">
+    <bottom>
+        <Label text="Copyright (c) 2016-2017." BorderPane.alignment="CENTER">
+            <font>
+                <Font size="10.0" />
+            </font>
+        </Label>
+    </bottom>
+    <top>
+        <ImageView fitHeight="85.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+            <image>
+                <Image url="@playnlearn.gif" />
+            </image>
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+        </ImageView>
+    </top>
+   <center>
+      <VBox alignment="CENTER" prefHeight="127.0" prefWidth="292.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Game-Based Educational Platform" textFill="#d70c0c">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Label>
+            <Label text="Developers">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label text="Abdallah Abdelazim" />
+            <Label text="Abdelaziz Mahmoud" />
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

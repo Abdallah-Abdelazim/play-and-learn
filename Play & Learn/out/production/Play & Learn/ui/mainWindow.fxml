@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="450.0" prefWidth="650.0" stylesheets="@mainWindow.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.MainWindowController">
+   <top>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar VBox.vgrow="ALWAYS">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#onClosedClicked" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#onAboutClicked" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <HBox spacing="3.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <TextField fx:id="username" focusTraversable="false" prefHeight="25.0" prefWidth="141.0" promptText="username" HBox.hgrow="ALWAYS" />
+                  <PasswordField fx:id="password" focusTraversable="false" promptText="password" HBox.hgrow="ALWAYS" />
+                  <Button id="login-button" defaultButton="true" mnemonicParsing="false" onAction="#onLoginButtonClicked" text="Log in" HBox.hgrow="ALWAYS" />
+                  <Region prefHeight="25.0" prefWidth="17.0" HBox.hgrow="ALWAYS" />
+                  <Label text="Don't Have an Account?">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+                  <Button id="register-button" mnemonicParsing="false" onAction="#onRegisterButtonClicked" text="Register" HBox.hgrow="ALWAYS" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="2.0" right="2.0" top="5.0" />
+               </padding>
+            </HBox>
+            <RadioButton fx:id="asStudentBtn" focusTraversable="false" mnemonicParsing="false" selected="true" text="Login as Student">
+               <toggleGroup>
+                  <ToggleGroup fx:id="loginType" />
+               </toggleGroup>
+               <VBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="asTeacherBtn" focusTraversable="false" mnemonicParsing="false" text="Login as Teacher" toggleGroup="$loginType">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </padding>
+            </RadioButton>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <ImageView fitHeight="160.0" fitWidth="351.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+         <image>
+            <Image url="@playnlearn.gif" />
+         </image>
+         <BorderPane.margin>
+            <Insets left="20.0" />
+         </BorderPane.margin>
+      </ImageView>
+   </center>
+</BorderPane>

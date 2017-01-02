@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="650.0" prefWidth="850.0" stylesheets="@teacherHome.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.TeacherHomeController">
+    <top>
+        <VBox alignment="CENTER_LEFT" BorderPane.alignment="CENTER">
+            <children>
+                <MenuBar>
+                    <menus>
+                        <Menu mnemonicParsing="false" text="File">
+                            <items>
+                        <MenuItem mnemonicParsing="false" onAction="#onLogoutClicked" text="Logout" />
+                                <MenuItem mnemonicParsing="false" onAction="#onClosedClicked" text="Close" />
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Help">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#onAboutClicked" text="About" />
+                            </items>
+                        </Menu>
+                    </menus>
+                </MenuBar>
+            </children>
+        </VBox>
+    </top>
+   <center>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab text="Player Status">
+               <content>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0">
+                     <center>
+                            <GridPane alignment="CENTER" hgap="3.0" styleClass="grid" vgap="3.0" BorderPane.alignment="CENTER">
+                                <columnConstraints>
+                                    <ColumnConstraints hgrow="NEVER" maxWidth="378.33331298828125" minWidth="10.0" prefWidth="156.0" />
+                                    <ColumnConstraints hgrow="ALWAYS" maxWidth="680.555549621582" minWidth="10.0" prefWidth="601.888916015625" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                <children>
+                                    <Label text="Name">
+                                        <font>
+                                            <Font size="18.0" />
+                                        </font>
+                                        <GridPane.margin>
+                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                        </GridPane.margin>
+                                    </Label>
+                                    <Label text="Email" GridPane.rowIndex="1">
+                                        <font>
+                                            <Font size="18.0" />
+                                        </font>
+                                        <GridPane.margin>
+                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                        </GridPane.margin>
+                                    </Label>
+                                    <Label text="Gender" GridPane.rowIndex="3">
+                                        <font>
+                                            <Font size="18.0" />
+                                        </font>
+                                        <GridPane.margin>
+                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                        </GridPane.margin>
+                                    </Label>
+                                    <Label text="Age" GridPane.rowIndex="2">
+                                        <font>
+                                            <Font size="18.0" />
+                                        </font>
+                                        <GridPane.margin>
+                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                        </GridPane.margin>
+                                    </Label>
+                                    <Label fx:id="nameLabel" GridPane.columnIndex="1">
+                                        <font>
+                                            <Font size="18.0" />
+                                        </font>
+                                        <GridPane.margin>
+                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                        </GridPane.margin>
+                                    </Label>
+                                    <Label fx:id="emailLabel" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                        <font>
+                                            <Font size="18.0" />
+                                        </font>
+                                        <GridPane.margin>
+                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                        </GridPane.margin>
+                                    </Label>
+                                    <Label fx:id="ageLabel" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                        <font>
+                                            <Font size="18.0" />
+                                        </font>
+                                        <GridPane.margin>
+                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                        </GridPane.margin>
+                                    </Label>
+                                    <Label fx:id="genderLabel" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                        <font>
+                                            <Font size="18.0" />
+                                        </font>
+                                        <GridPane.margin>
+                                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                        </GridPane.margin>
+                                    </Label>
+                                </children>
+                                <padding>
+                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                </padding>
+                            </GridPane>
+                     </center>
+                     <bottom>
+                        <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <HBox prefHeight="100.0" prefWidth="200.0" />
+                              <HBox prefHeight="100.0" prefWidth="200.0" />
+                           </children>
+                        </VBox>
+                     </bottom>
+                  </BorderPane>
+               </content>
+            </Tab>
+          <Tab text="Play Game">
+               <content>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0">
+                     <bottom>
+                        <Label fx:id="selectedGameDescription" alignment="CENTER" textFill="RED" wrapText="true" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font name="System Bold Italic" size="24.0" />
+                           </font>
+                           <BorderPane.margin>
+                              <Insets bottom="200.0" left="100.0" right="100.0" top="100.0" />
+                           </BorderPane.margin>
+                        </Label>
+                     </bottom>
+                     <top>
+                        <HBox alignment="CENTER_LEFT" fillHeight="false" prefHeight="69.0" prefWidth="800.0" spacing="50.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <ComboBox fx:id="fieldsCB_Play" onAction="#afterChoosingField_play" prefHeight="25.0" prefWidth="248.0" promptText="Choose Field" HBox.hgrow="ALWAYS" />
+                              <ComboBox fx:id="gamesCB_Play" disable="true" onAction="#afterChoosingGame" prefHeight="25.0" prefWidth="283.0" promptText="Choose Game" HBox.hgrow="ALWAYS" />
+                              <Region HBox.hgrow="ALWAYS" />
+                              <Button defaultButton="true" mnemonicParsing="false" onAction="#onPlayButtonClicked" prefHeight="33.0" prefWidth="77.0" text="Play" HBox.hgrow="ALWAYS">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                           <padding>
+                              <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+                           </padding>
+                        </HBox>
+                     </top>
+                  </BorderPane>
+               </content>
+            </Tab>
+            <Tab text="Add Game">
+               <content>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0">
+                     <top>
+                        <GridPane alignment="CENTER" prefHeight="461.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="387.0" minWidth="10.0" prefWidth="151.4444580078125" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="647.4444580078125" minWidth="10.0" prefWidth="628.5555419921875" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints maxHeight="51.4444580078125" minHeight="10.0" prefHeight="51.4444580078125" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="185.2222442626953" minHeight="10.0" prefHeight="113.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="139.66668701171875" minHeight="10.0" prefHeight="37.4444580078125" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="217.6666717529297" minHeight="10.0" prefHeight="50.5555419921875" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="233.33334350585938" minHeight="10.0" prefHeight="187.888916015625" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="name">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label text="description" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Game Type" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Enter Questions" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="name" prefHeight="25.0" prefWidth="540.0" promptText="Enter game name here" GridPane.columnIndex="1" />
+                              <TextArea fx:id="description" prefHeight="200.0" prefWidth="200.0" promptText="Enter a brief description" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets />
+                                 </GridPane.margin>
+                              </TextArea>
+                              <ComboBox fx:id="typesCB_Add" onAction="#afterChoosingType_add" prefWidth="150.0" promptText="Choose Type" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <VBox alignment="CENTER" prefHeight="200.0" prefWidth="577.0" spacing="15.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                 <children>
+                                    <TextField fx:id="questionBody" disable="true" promptText="Enter Question Body Here" />
+                                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="3.0">
+                                       <children>
+                                          <TextField fx:id="answer1" disable="true" promptText="Answer 1" />
+                                          <TextField fx:id="answer2" disable="true" promptText="Answer 2" />
+                                          <TextField fx:id="answer3" disable="true" promptText="Answer 3" />
+                                          <TextField fx:id="answer4" disable="true" promptText="Answer 4" />
+                                       </children>
+                                    </HBox>
+                                    <TextField fx:id="theRightAnswer" disable="true" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="183.0" promptText="Enter the Right Answer Here" />
+                                    <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="4.0">
+                                       <children>
+                                          <Label fx:id="addedMessageLabel" textFill="RED" />
+                                          <Button mnemonicParsing="false" onAction="#onAddAnotherQuestionButtonClicked" prefHeight="25.0" prefWidth="147.0" text="add another question" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <Label text="Game Field" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="fieldsCB_Add" prefWidth="150.0" promptText="Choose Field" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </GridPane>
+                     </top>
+                     <bottom>
+                        <VBox alignment="CENTER" prefHeight="84.0" prefWidth="800.0" spacing="5.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label fx:id="successAddMessageLabel" textFill="RED" />
+                              <Button mnemonicParsing="false" onAction="#onAddGameButtonClicked" prefHeight="35.0" prefWidth="157.0" text="Finish and Save">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </bottom>
+                  </BorderPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+</BorderPane>

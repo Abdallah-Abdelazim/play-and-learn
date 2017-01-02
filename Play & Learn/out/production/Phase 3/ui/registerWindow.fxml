@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" stylesheets="@registerWindow.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.RegisterWindowController">
+   <bottom>
+      <Button id="bevel-grey" fx:id="registerBtn" alignment="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#onRegisterButtonClicked" prefHeight="38.0" prefWidth="161.0" text="Register" textFill="#c50909" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="6.0" />
+         </BorderPane.margin>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+   </bottom>
+   <center>
+      <GridPane prefHeight="305.0" prefWidth="596.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="291.3333740234375" minWidth="10.0" prefWidth="103.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="511.0" minWidth="10.0" prefWidth="493.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="User Name">
+               <GridPane.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Password" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Actual Name" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Email" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Age" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Gender" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="username" promptText="Choose a username" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="password" promptText="Choose a password" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="name" promptText="Enter your real name" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="email" promptText="Enter your Email address " GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="age" promptText="Enter your Age" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </GridPane.margin>
+            </TextField>
+            <HBox alignment="CENTER_LEFT" prefHeight="23.0" prefWidth="493.0" spacing="20.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <children>
+                  <RadioButton fx:id="maleBtn" mnemonicParsing="false" text="male">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="gender" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="femaleBtn" mnemonicParsing="false" text="female" toggleGroup="$gender" />
+               </children>
+               <padding>
+                  <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+               </padding>
+            </HBox>
+            <Label text="Account Type" GridPane.rowIndex="6" />
+            <HBox alignment="CENTER_LEFT" prefHeight="19.0" prefWidth="491.0" spacing="20.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <children>
+                  <RadioButton fx:id="studentBtn" mnemonicParsing="false" text="Student">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="accountType" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="teacherBtn" mnemonicParsing="false" text="Teacher" toggleGroup="$accountType" />
+               </children>
+               <padding>
+                  <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+               </padding>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+         </BorderPane.margin>
+      </GridPane>
+   </center>
+   <top>
+      <Label text="Please fill The following information" textFill="#181970" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+         <padding>
+            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+         </padding>
+         <BorderPane.margin>
+            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+         </BorderPane.margin>
+      </Label>
+   </top>
+</BorderPane>

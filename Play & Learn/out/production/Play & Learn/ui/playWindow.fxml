@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="650.0" prefWidth="850.0" styleClass="root" stylesheets="@playWindow.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.PlayWindowController">
+   <top>
+      <Label fx:id="questionBody" focusTraversable="false" text="Question" wrapText="true" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="System Bold" size="33.0" />
+         </font>
+         <BorderPane.margin>
+            <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+         </BorderPane.margin>
+      </Label>
+   </top>
+   <center>
+      <HBox alignment="CENTER" prefHeight="301.0" prefWidth="800.0" spacing="60.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="ans1" focusTraversable="false" text="ans1" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="ans2" focusTraversable="false" text="ans2" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="ans3" focusTraversable="false" text="ans3" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="ans4" focusTraversable="false" text="ans4" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </center>
+   <bottom>
+      <VBox alignment="CENTER_RIGHT" prefHeight="158.0" prefWidth="700.0" spacing="50.0">
+         <children>
+            <TextField fx:id="userAnswer" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="34.0" prefWidth="320.0" promptText="Enter your answer here" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </VBox.margin>
+            </TextField>
+            <Button id="next-button" fx:id="nextQuestionButton" defaultButton="true" mnemonicParsing="false" onAction="#onNextQuestionButtonClicked" prefHeight="43.0" prefWidth="160.0" text="Next Question" textFill="#e90000" VBox.vgrow="ALWAYS">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </bottom>
+</BorderPane>
