@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="12" passed="12">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="64" started-at="2017-03-11T16:46:37Z" finished-at="2017-03-11T16:46:37Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="64" started-at="2017-03-11T16:46:37Z" finished-at="2017-03-11T16:46:37Z">
+      <class name="test.gameTest">
+        <test-method status="PASS" signature="SaveCheckGameTest(swe.Check)[pri:0, instance:test.gameTest@3c09711b]" name="SaveCheckGameTest" duration-ms="8" started-at="2017-03-11T18:46:37Z" data-provider="savegamecheck" finished-at="2017-03-11T18:46:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[swe.Check@42dafa95]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SaveCheckGameTest -->
+        <test-method status="PASS" signature="SaveCheckGameTest(swe.Check)[pri:0, instance:test.gameTest@3c09711b]" name="SaveCheckGameTest" duration-ms="1" started-at="2017-03-11T18:46:37Z" data-provider="savegamecheck" finished-at="2017-03-11T18:46:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[swe.Check@ff5b51f]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SaveCheckGameTest -->
+        <test-method status="PASS" signature="SaveCheckGameTest(swe.Check)[pri:0, instance:test.gameTest@3c09711b]" name="SaveCheckGameTest" duration-ms="0" started-at="2017-03-11T18:46:37Z" data-provider="savegamecheck" finished-at="2017-03-11T18:46:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[swe.Check@5702b3b1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SaveCheckGameTest -->
+        <test-method status="PASS" signature="SaveCheckGameTest(swe.Check)[pri:0, instance:test.gameTest@3c09711b]" name="SaveCheckGameTest" duration-ms="2" started-at="2017-03-11T18:46:37Z" data-provider="savegamecheck" finished-at="2017-03-11T18:46:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[swe.Check@4b952a2d]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SaveCheckGameTest -->
+        <test-method status="PASS" signature="SaveCheckGameTest(swe.Check)[pri:0, instance:test.gameTest@3c09711b]" name="SaveCheckGameTest" duration-ms="1" started-at="2017-03-11T18:46:37Z" data-provider="savegamecheck" finished-at="2017-03-11T18:46:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[swe.Check@73846619]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SaveCheckGameTest -->
+        <test-method status="PASS" signature="SaveCheckGameTest(swe.Check)[pri:0, instance:test.gameTest@3c09711b]" name="SaveCheckGameTest" duration-ms="1" started-at="2017-03-11T18:46:37Z" data-provider="savegamecheck" finished-at="2017-03-11T18:46:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[swe.Check@29ca901e]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SaveCheckGameTest -->
+        <test-method status="PASS" signature="SaveMCQGameTest(swe.MCQ)[pri:0, instance:test.gameTest@3c09711b]" name="SaveMCQGameTest" duration-ms="1" started-at="2017-03-11T18:46:37Z" data-provider="savegame" finished-at="2017-03-11T18:46:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[swe.MCQ@6adede5]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SaveMCQGameTest -->
+        <test-method status="PASS" signature="SaveMCQGameTest(swe.MCQ)[pri:0, instance:test.gameTest@3c09711b]" name="SaveMCQGameTest" duration-ms="1" started-at="2017-03-11T18:46:37Z" data-provider="savegame" finished-at="2017-03-11T18:46:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[swe.MCQ@5025a98f]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SaveMCQGameTest -->
+        <test-method status="PASS" signature="SaveMCQGameTest(swe.MCQ)[pri:0, instance:test.gameTest@3c09711b]" name="SaveMCQGameTest" duration-ms="1" started-at="2017-03-11T18:46:37Z" data-provider="savegame" finished-at="2017-03-11T18:46:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[swe.MCQ@20322d26]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SaveMCQGameTest -->
+        <test-method status="PASS" signature="SaveMCQGameTest(swe.MCQ)[pri:0, instance:test.gameTest@3c09711b]" name="SaveMCQGameTest" duration-ms="1" started-at="2017-03-11T18:46:37Z" data-provider="savegame" finished-at="2017-03-11T18:46:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[swe.MCQ@64bfbc86]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SaveMCQGameTest -->
+        <test-method status="PASS" signature="SaveMCQGameTest(swe.MCQ)[pri:0, instance:test.gameTest@3c09711b]" name="SaveMCQGameTest" duration-ms="1" started-at="2017-03-11T18:46:37Z" data-provider="savegame" finished-at="2017-03-11T18:46:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[swe.MCQ@55d56113]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SaveMCQGameTest -->
+        <test-method status="PASS" signature="SaveMCQGameTest(swe.MCQ)[pri:0, instance:test.gameTest@3c09711b]" name="SaveMCQGameTest" duration-ms="2" started-at="2017-03-11T18:46:37Z" data-provider="savegame" finished-at="2017-03-11T18:46:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[swe.MCQ@dc24521]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SaveMCQGameTest -->
+      </class> <!-- test.gameTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
