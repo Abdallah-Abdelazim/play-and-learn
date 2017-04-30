@@ -107,7 +107,7 @@
   			<li>Answer The Following Questions:  <br/></li>
   		</ul>
 				
-		<form action="/game" th:action="@{'/game?courseID='+ ${courseID} + '&amp;gameID=' + ${game.getGameId()}}" th:object="${game}" method="post">
+		<form th:if="${game.questions.size()} != 0" action="/game" th:action="@{'/game?courseID='+ ${courseID} + '&amp;gameID=' + ${game.getGameId()}}" th:object="${game}" method="post">
        			<div th:each="q , stats : *{questions}">    
        				<label th:text="${q.getqBody()}">Question Body </label><br/>					
        				<input type="radio" name="${stats.index}" th:value="${q.getAnswer1()}" th:text="'  ' + ${q.getAnswer1()}"/><br/>

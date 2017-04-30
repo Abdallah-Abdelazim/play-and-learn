@@ -1,275 +1,497 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="8" passed="8">
+<testng-results skipped="0" failed="0" total="14" passed="14">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="10848" started-at="2017-04-30T17:54:04Z" finished-at="2017-04-30T17:54:15Z">
+  <suite name="Default suite" duration-ms="10292" started-at="2017-04-30T23:55:49Z" finished-at="2017-04-30T23:55:59Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="10848" started-at="2017-04-30T17:54:04Z" finished-at="2017-04-30T17:54:15Z">
-      <class name="play_and_learn.Testcourse">
-        <test-method status="PASS" signature="springTestContextBeforeTestClass()[pri:0, instance:play_and_learn.Testcourse@d4342c2]" name="springTestContextBeforeTestClass" is-config="true" duration-ms="12" started-at="2017-04-30T17:54:04Z" finished-at="2017-04-30T17:54:04Z">
+    <test name="Default test" duration-ms="10292" started-at="2017-04-30T23:55:49Z" finished-at="2017-04-30T23:55:59Z">
+      <class name="play_and_learn.TestAccount">
+        <test-method status="PASS" signature="springTestContextBeforeTestClass()[pri:0, instance:play_and_learn.TestAccount@d4342c2]" name="springTestContextBeforeTestClass" is-config="true" duration-ms="14" started-at="2017-04-30T23:55:49Z" finished-at="2017-04-30T23:55:49Z">
         </test-method> <!-- springTestContextBeforeTestClass -->
-        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:play_and_learn.Testcourse@d4342c2]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="9919" started-at="2017-04-30T17:54:04Z" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" finished-at="2017-04-30T17:54:14Z">
+        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:play_and_learn.TestAccount@d4342c2]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="9256" started-at="2017-04-30T23:55:49Z" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" finished-at="2017-04-30T23:55:58Z">
         </test-method> <!-- springTestContextPrepareTestInstance -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:play_and_learn.Testcourse@d4342c2]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2017-04-30T17:54:14Z" finished-at="2017-04-30T17:54:14Z">
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:play_and_learn.TestAccount@d4342c2]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="2" started-at="2017-04-30T23:55:58Z" finished-at="2017-04-30T23:55:58Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void play_and_learn.Testcourse.f(java.lang.String,java.lang.String)]]>
+                <![CDATA[public void play_and_learn.TestAccount.f(java.lang.String,java.lang.String)]]>
               </value>
             </param>
           </params>
         </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="f(java.lang.String, java.lang.String)[pri:0, instance:play_and_learn.Testcourse@d4342c2]" name="f" duration-ms="372" started-at="2017-04-30T17:54:14Z" finished-at="2017-04-30T17:54:15Z">
+        <test-method status="PASS" signature="f(java.lang.String, java.lang.String)[pri:0, instance:play_and_learn.TestAccount@d4342c2]" name="f" duration-ms="366" started-at="2017-04-30T23:55:58Z" finished-at="2017-04-30T23:55:59Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[math]]>
+                <![CDATA[ahmed]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[math course]]>
+                <![CDATA[12345]]>
               </value>
             </param>
           </params>
         </test-method> <!-- f -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:play_and_learn.Testcourse@d4342c2]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2017-04-30T17:54:15Z" finished-at="2017-04-30T17:54:15Z">
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:play_and_learn.TestAccount@d4342c2]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2017-04-30T23:55:59Z" finished-at="2017-04-30T23:55:59Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void play_and_learn.Testcourse.f(java.lang.String,java.lang.String)]]>
+                <![CDATA[public void play_and_learn.TestAccount.f(java.lang.String,java.lang.String)]]>
               </value>
             </param>
           </params>
         </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:play_and_learn.Testcourse@d4342c2]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="2" started-at="2017-04-30T17:54:15Z" finished-at="2017-04-30T17:54:15Z">
+        <test-method status="PASS" signature="f(java.lang.String, java.lang.String)[pri:0, instance:play_and_learn.TestAccount@d4342c2]" name="f" duration-ms="35" started-at="2017-04-30T23:55:59Z" finished-at="2017-04-30T23:55:59Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void play_and_learn.Testcourse.f(java.lang.String,java.lang.String)]]>
-              </value>
-            </param>
-          </params>
-        </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="f(java.lang.String, java.lang.String)[pri:0, instance:play_and_learn.Testcourse@d4342c2]" name="f" duration-ms="35" started-at="2017-04-30T17:54:15Z" finished-at="2017-04-30T17:54:15Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[zzzz]]>
+                <![CDATA[Mohammed]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[hahaha]]>
+                <![CDATA[23443]]>
               </value>
             </param>
           </params>
         </test-method> <!-- f -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:play_and_learn.Testcourse@d4342c2]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2017-04-30T17:54:15Z" finished-at="2017-04-30T17:54:15Z">
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:play_and_learn.TestAccount@d4342c2]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2017-04-30T23:55:59Z" finished-at="2017-04-30T23:55:59Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void play_and_learn.Testcourse.f(java.lang.String,java.lang.String)]]>
-              </value>
-            </param>
-          </params>
-        </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:play_and_learn.Testcourse@d4342c2]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2017-04-30T17:54:15Z" finished-at="2017-04-30T17:54:15Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void play_and_learn.Testcourse.f(java.lang.String,java.lang.String)]]>
+                <![CDATA[public void play_and_learn.TestAccount.f(java.lang.String,java.lang.String)]]>
               </value>
             </param>
           </params>
         </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="f(java.lang.String, java.lang.String)[pri:0, instance:play_and_learn.Testcourse@d4342c2]" name="f" duration-ms="31" started-at="2017-04-30T17:54:15Z" finished-at="2017-04-30T17:54:15Z">
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:play_and_learn.TestAccount@d4342c2]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2017-04-30T23:55:59Z" finished-at="2017-04-30T23:55:59Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[prolog]]>
+                <![CDATA[public void play_and_learn.TestAccount.f(java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="f(java.lang.String, java.lang.String)[pri:0, instance:play_and_learn.TestAccount@d4342c2]" name="f" duration-ms="25" started-at="2017-04-30T23:55:59Z" finished-at="2017-04-30T23:55:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ziad]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[I hate you language]]>
+                <![CDATA[146fg]]>
               </value>
             </param>
           </params>
         </test-method> <!-- f -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:play_and_learn.Testcourse@d4342c2]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="10" started-at="2017-04-30T17:54:15Z" finished-at="2017-04-30T17:54:15Z">
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:play_and_learn.TestAccount@d4342c2]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2017-04-30T23:55:59Z" finished-at="2017-04-30T23:55:59Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void play_and_learn.Testcourse.f(java.lang.String,java.lang.String)]]>
-              </value>
-            </param>
-          </params>
-        </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:play_and_learn.Testcourse@d4342c2]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2017-04-30T17:54:15Z" finished-at="2017-04-30T17:54:15Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void play_and_learn.Testcourse.f(java.lang.String,java.lang.String)]]>
+                <![CDATA[public void play_and_learn.TestAccount.f(java.lang.String,java.lang.String)]]>
               </value>
             </param>
           </params>
         </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="f(java.lang.String, java.lang.String)[pri:0, instance:play_and_learn.Testcourse@d4342c2]" name="f" duration-ms="23" started-at="2017-04-30T17:54:15Z" finished-at="2017-04-30T17:54:15Z">
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:play_and_learn.TestAccount@d4342c2]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2017-04-30T23:55:59Z" finished-at="2017-04-30T23:55:59Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[c++]]>
+                <![CDATA[public void play_and_learn.TestAccount.f(java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:play_and_learn.TestAccount@d4342c2]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2017-04-30T23:55:59Z" finished-at="2017-04-30T23:55:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void play_and_learn.TestAccount.f(java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="f(java.lang.String, java.lang.String)[pri:0, instance:play_and_learn.TestAccount@d4342c2]" name="f" duration-ms="44" started-at="2017-04-30T23:55:59Z" finished-at="2017-04-30T23:55:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[yasser]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[ohhhh]]>
+                <![CDATA[XxX58]]>
               </value>
             </param>
           </params>
         </test-method> <!-- f -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:play_and_learn.Testcourse@d4342c2]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2017-04-30T17:54:15Z" finished-at="2017-04-30T17:54:15Z">
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:play_and_learn.TestAccount@d4342c2]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2017-04-30T23:55:59Z" finished-at="2017-04-30T23:55:59Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void play_and_learn.Testcourse.f(java.lang.String,java.lang.String)]]>
+                <![CDATA[public void play_and_learn.TestAccount.f(java.lang.String,java.lang.String)]]>
               </value>
             </param>
           </params>
         </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="f1(java.lang.String, java.lang.String)[pri:0, instance:play_and_learn.Testcourse@d4342c2]" name="f1" duration-ms="61" started-at="2017-04-30T17:54:15Z" finished-at="2017-04-30T17:54:15Z">
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:play_and_learn.TestAccount@d4342c2]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2017-04-30T23:55:59Z" finished-at="2017-04-30T23:55:59Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[matlab]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[matlab course]]>
-              </value>
-            </param>
-          </params>
-        </test-method> <!-- f1 -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:play_and_learn.Testcourse@d4342c2]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2017-04-30T17:54:15Z" finished-at="2017-04-30T17:54:15Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void play_and_learn.Testcourse.f1(java.lang.String,java.lang.String)]]>
+                <![CDATA[public void play_and_learn.TestAccount.f1(java.lang.String,java.lang.String)]]>
               </value>
             </param>
           </params>
         </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:play_and_learn.Testcourse@d4342c2]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2017-04-30T17:54:15Z" finished-at="2017-04-30T17:54:15Z">
+        <test-method status="PASS" signature="f1(java.lang.String, java.lang.String)[pri:0, instance:play_and_learn.TestAccount@d4342c2]" name="f1" duration-ms="93" started-at="2017-04-30T23:55:59Z" finished-at="2017-04-30T23:55:59Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void play_and_learn.Testcourse.f1(java.lang.String,java.lang.String)]]>
-              </value>
-            </param>
-          </params>
-        </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="f1(java.lang.String, java.lang.String)[pri:0, instance:play_and_learn.Testcourse@d4342c2]" name="f1" duration-ms="19" started-at="2017-04-30T17:54:15Z" finished-at="2017-04-30T17:54:15Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[aaaa]]>
+                <![CDATA[tony]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[hahaha]]>
+                <![CDATA[12345]]>
               </value>
             </param>
           </params>
         </test-method> <!-- f1 -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:play_and_learn.Testcourse@d4342c2]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2017-04-30T17:54:15Z" finished-at="2017-04-30T17:54:15Z">
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:play_and_learn.TestAccount@d4342c2]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2017-04-30T23:55:59Z" finished-at="2017-04-30T23:55:59Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void play_and_learn.Testcourse.f1(java.lang.String,java.lang.String)]]>
-              </value>
-            </param>
-          </params>
-        </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:play_and_learn.Testcourse@d4342c2]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2017-04-30T17:54:15Z" finished-at="2017-04-30T17:54:15Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void play_and_learn.Testcourse.f1(java.lang.String,java.lang.String)]]>
+                <![CDATA[public void play_and_learn.TestAccount.f1(java.lang.String,java.lang.String)]]>
               </value>
             </param>
           </params>
         </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="f1(java.lang.String, java.lang.String)[pri:0, instance:play_and_learn.Testcourse@d4342c2]" name="f1" duration-ms="13" started-at="2017-04-30T17:54:15Z" finished-at="2017-04-30T17:54:15Z">
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:play_and_learn.TestAccount@d4342c2]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2017-04-30T23:55:59Z" finished-at="2017-04-30T23:55:59Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[lisp]]>
+                <![CDATA[public void play_and_learn.TestAccount.f1(java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="f1(java.lang.String, java.lang.String)[pri:0, instance:play_and_learn.TestAccount@d4342c2]" name="f1" duration-ms="32" started-at="2017-04-30T23:55:59Z" finished-at="2017-04-30T23:55:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[marko]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[I hate you language]]>
+                <![CDATA[23443]]>
               </value>
             </param>
           </params>
         </test-method> <!-- f1 -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:play_and_learn.Testcourse@d4342c2]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2017-04-30T17:54:15Z" finished-at="2017-04-30T17:54:15Z">
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:play_and_learn.TestAccount@d4342c2]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2017-04-30T23:55:59Z" finished-at="2017-04-30T23:55:59Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void play_and_learn.Testcourse.f1(java.lang.String,java.lang.String)]]>
-              </value>
-            </param>
-          </params>
-        </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:play_and_learn.Testcourse@d4342c2]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="7" started-at="2017-04-30T17:54:15Z" finished-at="2017-04-30T17:54:15Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void play_and_learn.Testcourse.f1(java.lang.String,java.lang.String)]]>
+                <![CDATA[public void play_and_learn.TestAccount.f1(java.lang.String,java.lang.String)]]>
               </value>
             </param>
           </params>
         </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:play_and_learn.Testcourse@d4342c2]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2017-04-30T17:54:15Z" finished-at="2017-04-30T17:54:15Z">
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:play_and_learn.TestAccount@d4342c2]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2017-04-30T23:55:59Z" finished-at="2017-04-30T23:55:59Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void play_and_learn.Testcourse.f1(java.lang.String,java.lang.String)]]>
+                <![CDATA[public void play_and_learn.TestAccount.f1(java.lang.String,java.lang.String)]]>
               </value>
             </param>
           </params>
         </test-method> <!-- springTestContextBeforeTestMethod -->
-        <test-method status="PASS" signature="f1(java.lang.String, java.lang.String)[pri:0, instance:play_and_learn.Testcourse@d4342c2]" name="f1" duration-ms="27" started-at="2017-04-30T17:54:15Z" finished-at="2017-04-30T17:54:15Z">
+        <test-method status="PASS" signature="f1(java.lang.String, java.lang.String)[pri:0, instance:play_and_learn.TestAccount@d4342c2]" name="f1" duration-ms="26" started-at="2017-04-30T23:55:59Z" finished-at="2017-04-30T23:55:59Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[c]]>
+                <![CDATA[henry]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[ohhhh]]>
+                <![CDATA[146fg]]>
               </value>
             </param>
           </params>
         </test-method> <!-- f1 -->
-        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:play_and_learn.Testcourse@d4342c2]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2017-04-30T17:54:15Z" finished-at="2017-04-30T17:54:15Z">
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:play_and_learn.TestAccount@d4342c2]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="4" started-at="2017-04-30T23:55:59Z" finished-at="2017-04-30T23:55:59Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void play_and_learn.Testcourse.f1(java.lang.String,java.lang.String)]]>
+                <![CDATA[public void play_and_learn.TestAccount.f1(java.lang.String,java.lang.String)]]>
               </value>
             </param>
           </params>
         </test-method> <!-- springTestContextAfterTestMethod -->
-        <test-method status="PASS" signature="springTestContextAfterTestClass()[pri:0, instance:play_and_learn.Testcourse@d4342c2]" name="springTestContextAfterTestClass" is-config="true" duration-ms="273" started-at="2017-04-30T17:54:15Z" finished-at="2017-04-30T17:54:15Z">
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:play_and_learn.TestAccount@d4342c2]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2017-04-30T23:55:59Z" finished-at="2017-04-30T23:55:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void play_and_learn.TestAccount.f1(java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="f1(java.lang.String, java.lang.String)[pri:0, instance:play_and_learn.TestAccount@d4342c2]" name="f1" duration-ms="26" started-at="2017-04-30T23:55:59Z" finished-at="2017-04-30T23:55:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[lolo]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[XxX58]]>
+              </value>
+            </param>
+          </params>
+        </test-method> <!-- f1 -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:play_and_learn.TestAccount@d4342c2]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2017-04-30T23:55:59Z" finished-at="2017-04-30T23:55:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void play_and_learn.TestAccount.f1(java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:play_and_learn.TestAccount@d4342c2]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2017-04-30T23:55:59Z" finished-at="2017-04-30T23:55:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void play_and_learn.TestAccount.f2(boolean,java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="f2(boolean, java.lang.String, java.lang.String)[pri:0, instance:play_and_learn.TestAccount@d4342c2]" name="f2" duration-ms="4" started-at="2017-04-30T23:55:59Z" finished-at="2017-04-30T23:55:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[tony]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[12345]]>
+              </value>
+            </param>
+          </params>
+        </test-method> <!-- f2 -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:play_and_learn.TestAccount@d4342c2]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2017-04-30T23:55:59Z" finished-at="2017-04-30T23:55:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void play_and_learn.TestAccount.f2(boolean,java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:play_and_learn.TestAccount@d4342c2]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2017-04-30T23:55:59Z" finished-at="2017-04-30T23:55:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void play_and_learn.TestAccount.f2(boolean,java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="f2(boolean, java.lang.String, java.lang.String)[pri:0, instance:play_and_learn.TestAccount@d4342c2]" name="f2" duration-ms="7" started-at="2017-04-30T23:55:59Z" finished-at="2017-04-30T23:55:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[marko]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[23443]]>
+              </value>
+            </param>
+          </params>
+        </test-method> <!-- f2 -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:play_and_learn.TestAccount@d4342c2]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2017-04-30T23:55:59Z" finished-at="2017-04-30T23:55:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void play_and_learn.TestAccount.f2(boolean,java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="f2(boolean, java.lang.String, java.lang.String)[pri:0, instance:play_and_learn.TestAccount@d4342c2]" name="f2" duration-ms="5" started-at="2017-04-30T23:55:59Z" finished-at="2017-04-30T23:55:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[henry]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[146]]>
+              </value>
+            </param>
+          </params>
+        </test-method> <!-- f2 -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:play_and_learn.TestAccount@d4342c2]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2017-04-30T23:55:59Z" finished-at="2017-04-30T23:55:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void play_and_learn.TestAccount.f2(boolean,java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:play_and_learn.TestAccount@d4342c2]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2017-04-30T23:55:59Z" finished-at="2017-04-30T23:55:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void play_and_learn.TestAccount.f2(boolean,java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:play_and_learn.TestAccount@d4342c2]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2017-04-30T23:55:59Z" finished-at="2017-04-30T23:55:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void play_and_learn.TestAccount.f2(boolean,java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="f2(boolean, java.lang.String, java.lang.String)[pri:0, instance:play_and_learn.TestAccount@d4342c2]" name="f2" duration-ms="5" started-at="2017-04-30T23:55:59Z" finished-at="2017-04-30T23:55:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[polo]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[XxX]]>
+              </value>
+            </param>
+          </params>
+        </test-method> <!-- f2 -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:play_and_learn.TestAccount@d4342c2]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2017-04-30T23:55:59Z" finished-at="2017-04-30T23:55:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void play_and_learn.TestAccount.f2(boolean,java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="f2(boolean, java.lang.String, java.lang.String)[pri:0, instance:play_and_learn.TestAccount@d4342c2]" name="f2" duration-ms="5" started-at="2017-04-30T23:55:59Z" finished-at="2017-04-30T23:55:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[henry]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[146fg]]>
+              </value>
+            </param>
+          </params>
+        </test-method> <!-- f2 -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:play_and_learn.TestAccount@d4342c2]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2017-04-30T23:55:59Z" finished-at="2017-04-30T23:55:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void play_and_learn.TestAccount.f2(boolean,java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:play_and_learn.TestAccount@d4342c2]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2017-04-30T23:55:59Z" finished-at="2017-04-30T23:55:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void play_and_learn.TestAccount.f2(boolean,java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:play_and_learn.TestAccount@d4342c2]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="1" started-at="2017-04-30T23:55:59Z" finished-at="2017-04-30T23:55:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void play_and_learn.TestAccount.f2(boolean,java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="f2(boolean, java.lang.String, java.lang.String)[pri:0, instance:play_and_learn.TestAccount@d4342c2]" name="f2" duration-ms="4" started-at="2017-04-30T23:55:59Z" finished-at="2017-04-30T23:55:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[lolo]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[XxX]]>
+              </value>
+            </param>
+          </params>
+        </test-method> <!-- f2 -->
+        <test-method status="PASS" signature="springTestContextAfterTestClass()[pri:0, instance:play_and_learn.TestAccount@d4342c2]" name="springTestContextAfterTestClass" is-config="true" duration-ms="273" started-at="2017-04-30T23:55:59Z" finished-at="2017-04-30T23:55:59Z">
         </test-method> <!-- springTestContextAfterTestClass -->
-      </class> <!-- play_and_learn.Testcourse -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:play_and_learn.TestAccount@d4342c2]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2017-04-30T23:55:59Z" finished-at="2017-04-30T23:55:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void play_and_learn.TestAccount.f2(boolean,java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+      </class> <!-- play_and_learn.TestAccount -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
