@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+	<meta charset="utf-8"/>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Add a Question</title>	
+		
+		
+
+		<!-- Icomoon Icon Fonts-->
+		<link rel="stylesheet" href="css/icomoon.css"/>
+
+		<!-- Magnific Popup -->
+		<link rel="stylesheet" href="css/magnific-popup.css"/>
+		
+		<link rel = "stylesheet" type = "text/css" href = "css/form-style.css" />
+
+		<!-- Theme style  -->
+		<link rel="stylesheet" href="css/style.css"/>
+
+	</head>
+	
+	<body>
+
+		<nav class="fh5co-nav" role="navigation">
+			<div class="top-menu">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-2">
+							<div id="fh5co-logo"><a href="#"><i class="icon-study"></i>Play &amp; Learn<span>.</span></a></div>
+						</div>
+					</div>
+				
+				</div>
+			</div>
+		</nav>
+		
+		<h1>Add a New Question</h1>
+		<form action="/addquestion.html" th:action="@{/addquestion(courseID=${courseID}, gameID=${gameID})}" th:object="${question}" method="post">
+		  <div class="container">  
+		    	<label><b>Question</b></label>
+		    	<input id="textbox" type="text" th:field="*{qBody}" placeholder="Enter Question Body" name="qBody" /><br/>
+		    	<input id="textbox" type="text" th:field="*{answer1}" placeholder="Enter First Choice Answer" name="answer1" /><br/>
+		    	<input id="textbox" type="text" th:field="*{answer2}" placeholder="Enter Second Choice Answer" name="answer2" /><br/>
+		    	<input th:if="${gameType} == 'mcq'" id="textbox" type="text" th:field="*{answer3}" placeholder="Enter Third Choice answer" name="answer3" /><br/>
+		    	<input th:if="${gameType} == 'mcq'" id="textbox" type="text" th:field="*{answer4}" placeholder="Enter Fourth Choice Answer" name="answer4" /><br/>
+		    	<input id="textbox" type="text" th:field="*{theRighAnswer}" placeholder="Enter the Correct choice of the above ones" name="theRightAnswer" /><br/>
+		    		
+		    <button id="button" type="submit">Add Question</button><br/>
+		  </div>
+		</form>
+		
+	</body>
+	
+</html>

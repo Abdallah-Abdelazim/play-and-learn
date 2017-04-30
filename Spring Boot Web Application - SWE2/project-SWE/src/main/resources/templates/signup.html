@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+	<meta charset="utf-8"/>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Play &amp; Learn - Sign Up</title>	
+		
+		<!-- Icomoon Icon Fonts-->
+		<link rel="stylesheet" href="css/icomoon.css"/>
+
+		<!-- Magnific Popup -->
+		<link rel="stylesheet" href="css/magnific-popup.css"/>
+		
+		<link rel = "stylesheet" type = "text/css" href = "css/form-style.css" />
+
+		<!-- Theme style  -->
+		<link rel="stylesheet" href="css/style.css"/>
+	</head>
+	
+	<body>
+	
+		<nav class="fh5co-nav" role="navigation">
+			<div class="top-menu">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-2">
+							<div id="fh5co-logo"><a href="#"><i class="icon-study"></i>Play &amp; Learn<span>.</span></a></div>
+						</div>
+					</div>
+				
+				</div>
+			</div>
+		</nav>
+		
+		<h1>Sign Up Page</h1>
+		<form action="/welcome" th:action="@{/signup}" th:object="${user}" method="post">
+		
+		  <div class="container">
+		  	<label><b>Name</b></label>
+		    <input type="text" th:field="*{name}" placeholder="Enter Your Name" name="name" />
+		    
+		    <label><b>E-mail</b></label>
+		    <input type="text" th:field="*{email}" placeholder="Enter Your E-mail" name="mail" />
+		    
+		    <label><b>Age</b></label>
+		    <input type="text" th:field="*{age}" placeholder="Enter Your Age" name="age" />
+		    
+		    <label><b>Username</b></label>
+		    <input type="text" th:field="*{username}" placeholder="Choose a Username (of size at least 3)" name="uname" />
+		
+		    <label><b>Password</b></label>
+		    <input type="password" th:field="*{password}" placeholder="Choose a Password (of size at least 5)" name="psw" />
+		    
+		    <label><b>Gender</b></label>
+		    <input type="radio" th:field="*{gender}" name="gender" value="male"/> Male
+  			<input type="radio" th:field="*{gender}" name="gender" value="female"/> Female
+  			<br /><br />
+  			
+  			<label><b>Account Type</b></label>
+		    <input type="radio" th:field="*{role}" name="accType" value="student"/> Student
+  			<input type="radio" th:field="*{role}" name="accType" value="teacher"/> Teacher
+  			<br /><br />
+  			
+  			<h5 th:text="${error}"></h5>
+		
+		    <button type="submit" value="Submit">Create Account</button>
+		    
+		  </div>
+		</form>
+	</body>
+	
+</html>

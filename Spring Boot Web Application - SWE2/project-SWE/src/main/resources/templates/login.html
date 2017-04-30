@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+	<meta charset="utf-8"/>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Play &amp; Learn - Login</title>	
+		
+		
+
+		<!-- Icomoon Icon Fonts-->
+		<link rel="stylesheet" href="css/icomoon.css"/>
+
+		<!-- Magnific Popup -->
+		<link rel="stylesheet" href="css/magnific-popup.css"/>
+		
+		<link rel = "stylesheet" type = "text/css" href = "css/form-style.css" />
+
+		<!-- Theme style  -->
+		<link rel="stylesheet" href="css/style.css"/>
+
+	</head>
+	
+	<body>
+
+		<nav class="fh5co-nav" role="navigation">
+			<div class="top-menu">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-2">
+							<div id="fh5co-logo"><a href="#"><i class="icon-study"></i>Play &amp; Learn<span>.</span></a></div>
+						</div>
+					</div>
+				
+				</div>
+			</div>
+		</nav>
+		
+		<h1>Login Page</h1>
+		<form action="/login.html" th:action="@{/login.html}" th:object="${user}" method="post">
+		  <div class="imgcontainer">
+		    <img src="images/user_avatar.png" alt="Avatar" class="avatar"/>
+		  </div>
+		
+		  <div class="container">
+		    <label><b>Username</b></label>
+		    <input type="text" th:field="*{username}" placeholder="Enter Username" name="uname" />
+		
+		    <label><b>Password</b></label>
+		    <input type="password" th:field="*{password}" placeholder="Enter Password" name="psw" />
+		    
+		    <h5 th:text="${error}"></h5>
+		
+		    <button type="submit">Login</button>
+		  </div>
+		</form>	
+	</body>
+	
+</html>

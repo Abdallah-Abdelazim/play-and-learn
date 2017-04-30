@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+	<meta charset="utf-8"/>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Create a Game</title>	
+		
+		
+
+		<!-- Icomoon Icon Fonts-->
+		<link rel="stylesheet" href="css/icomoon.css"/>
+
+		<!-- Magnific Popup -->
+		<link rel="stylesheet" href="css/magnific-popup.css"/>
+		
+		<link rel = "stylesheet" type = "text/css" href = "css/form-style.css" />
+
+		<!-- Theme style  -->
+		<link rel="stylesheet" href="css/style.css"/>
+
+	</head>
+	
+	<body>
+
+		<nav class="fh5co-nav" role="navigation">
+			<div class="top-menu">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-2">
+							<div id="fh5co-logo"><a href="#"><i class="icon-study"></i>Play &amp; Learn<span>.</span></a></div>
+						</div>
+					</div>
+				
+				</div>
+			</div>
+		</nav>
+		
+		<h1>Add a New Game</h1>
+		<form action="/creategame.html" th:action="@{/creategame(courseID=${courseID})}" th:object="${game}" method="post">
+		  <div class="container">
+		  	
+		  
+		    <label><b>Game Name</b></label>
+		    <input type="text" th:field="*{name}" placeholder="Enter the Game Name" name="gameName" /><br/>
+		    <label><b>Game Description</b></label>
+		    <input id="textbox" type="text" th:field="*{description}" placeholder="Enter a Brief Description" name="gameDescription" /><br/>
+		    <label><b>Game Type</b></label>		    
+		    <input type="radio" th:field="*{gameType}" name="gameType" value="tf"/> True &amp; False
+  			<input type="radio" th:field="*{gameType}" name="gameType" value="mcq"/> MCQ
+  			<br /><br />
+  			<label><b>Number of Questions in the game</b></label>
+		    <input id="textbox" type="text" th:field="*{numOfQuestions}" placeholder="Enter the Number of Questions in that Game" name="numOfQuestions" /><br/>
+		    		
+		    <button id="button" type="submit">Add Game</button><br/>
+		  </div>
+		</form>
+		
+	</body>
+	
+</html>

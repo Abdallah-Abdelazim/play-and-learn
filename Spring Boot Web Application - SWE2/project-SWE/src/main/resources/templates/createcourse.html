@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+	<meta charset="utf-8"/>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Play &amp; Learn - Create Course</title>	
+		
+		
+
+		<!-- Icomoon Icon Fonts-->
+		<link rel="stylesheet" href="css/icomoon.css"/>
+
+		<!-- Magnific Popup -->
+		<link rel="stylesheet" href="css/magnific-popup.css"/>
+		
+		<link rel = "stylesheet" type = "text/css" href = "css/form-style.css" />
+
+		<!-- Theme style  -->
+		<link rel="stylesheet" href="css/style.css"/>
+
+	</head>
+	
+	<body>
+
+		<nav class="fh5co-nav" role="navigation">
+			<div class="top-menu">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-2">
+							<div id="fh5co-logo"><a href="#"><i class="icon-study"></i>Play &amp; Learn<span>.</span></a></div>
+						</div>
+					</div>
+				
+				</div>
+			</div>
+		</nav>
+		
+		<h1>Create a New Course</h1>
+		<form action="/createcourse.html" th:action="@{/createcourse.html}" th:object="${course}" method="post">
+		  <div class="container">
+		  	
+		  
+		    <label><b>Course Name</b></label>
+		    <input type="text" th:field="*{courseName}" placeholder="Enter the Course Name" name="courseName" /><br/>
+		    <label><b>Course Description</b></label>
+		    <input id="textbox" type="text" th:field="*{courseDescription}" placeholder="Enter a Brief Description" name="courseDescription" /><br/>
+		    		
+		    <button id="button" type="submit">Create and Start Adding Games</button><br/>
+		  </div>
+		</form>
+	</body>
+	
+</html>
