@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import play_and_learn.ProjectSweApplication;
 import play_and_learn.model.User;
 import play_and_learn.service.AuthenticationService;
 import play_and_learn.service.CourseService;
@@ -49,8 +48,7 @@ public class SignupController {
 
         userService.save(user);
 		
-        ProjectSweApplication.activeUsername = user.getUsername();
-		ProjectSweApplication.activePassword = user.getPassword();
+        userService.setActiveUsername(user.getUsername());
 		
 		model.addAttribute("courses", courseService.getAllCourses());
         

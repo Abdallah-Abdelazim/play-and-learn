@@ -22,7 +22,7 @@ public class Game {
 	@JoinColumn(name = "course_id", nullable = false)
 	private Course course;
     
-    @OneToMany(targetEntity = Question.class, mappedBy = "q_id", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @OneToMany(targetEntity = Question.class, mappedBy = "game", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     protected List<Question> questions;
 
     public Game() {

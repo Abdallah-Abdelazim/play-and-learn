@@ -7,7 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class ProjectSweApplication {
 	
 	public static String activeUsername = null;
-	public static String activePassword = null;
 	
 	public static void main(String[] args) {
 		SpringApplication.run(ProjectSweApplication.class, args);

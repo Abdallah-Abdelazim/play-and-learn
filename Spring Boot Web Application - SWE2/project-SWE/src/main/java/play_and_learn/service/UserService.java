@@ -3,6 +3,7 @@ package play_and_learn.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import play_and_learn.ProjectSweApplication;
 import play_and_learn.model.User;
 import play_and_learn.repository.UserRepository;
 
@@ -25,5 +26,17 @@ public class UserService implements IUserService {
     public long getNumberOfRecords() {
     	return userRepository.count();
     }
+    
+    public String getLoggedInUser() {
+    	return ProjectSweApplication.activeUsername;
+    }
+
+	public String getActiveUsername() {
+		return ProjectSweApplication.activeUsername;
+	}
+
+	public void setActiveUsername(String activeUsername) {
+		ProjectSweApplication.activeUsername = activeUsername;
+	}
 
 }

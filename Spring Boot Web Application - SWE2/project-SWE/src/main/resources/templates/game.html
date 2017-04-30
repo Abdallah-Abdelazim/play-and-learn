@@ -33,6 +33,8 @@
 	
 		<!-- Theme style  -->
 		<link rel="stylesheet" href="css/style.css" th:href="@{css/style.css}"/>
+		
+		<link rel = "stylesheet" type = "text/css" href = "css/form-style.css" />
 	
 		<!-- Modernizr JS -->
 		<script src="js/modernizr-2.6.2.min.js"></script>
@@ -96,29 +98,28 @@
 		<div class="col-xs-2">
 			<div id="fh5co-logo"><i class="icon-study"></i><a href="#" th:text="'  ' + ${game.name}">  name of game </a></div>
 		</div>
-			<br/>
-			<ul>
-  				<li th:text="'Game Description:  ' + ${game.description}">Game Description</li>
-  				<li th:text="'Created by:  ' + ${game.creatorTeacherUsername}">Creator Teacher Username</li>
-  				<li th:text="'Game Type:  ' + ${game.gameType}">Game Type</li>
+		<br/>
+		<ul>
+  			<li th:text="'Game Description:  ' + ${game.description}">Game Description</li>
+  			<li th:text="'Created by:  ' + ${game.creatorTeacherUsername}">Creator Teacher Username</li>
+  			<li th:text="'Game Type:  ' + ${game.gameType}">Game Type</li>
   				
-  				<li>Answer The Following Questions:  <br/>
-					
-				<ol>
-   	 				<th:block th:object="${game}">
-       					<li th:each="q : *{questions}" th:text="${q.getqBody()}">Question Body
-       					<!-- 
-       						<input type="radio" th:field="*{q.getAnswer1()}" name="answer" th:value="tf"/> True &amp; False
-  							<input type="radio" th:field="*{q.getAnswer2()}" name="answer" th:value="mcq"/> MCQ
-  							<input type="radio" th:field="*{q.getAnswer3()}" name="answer" th:value="tf"/> True &amp; False
-  							<input type="radio" th:field="*{q.getAnswer4()}" name="answer" th:value="mcq"/> MCQ       					
-       					-->
-       					</li>
-   					</th:block>
-    			</ol>
-  				</li>
-			</ul>
-		</div>		
+  			<li>Answer The Following Questions:  <br/></li>
+  		</ul>
+				
+		<form action="/game" th:action="@{'/game?courseID='+ ${courseID} + '&amp;gameID=' + ${game.getGameId()}}" th:object="${game}" method="post">
+       			<div th:each="q , stats : *{questions}">    
+       				<label th:text="${q.getqBody()}">Question Body </label><br/>					
+       				<input type="radio" name="${stats.index}" th:value="${q.getAnswer1()}" th:text="'  ' + ${q.getAnswer1()}"/><br/>
+  					<input type="radio" name="${stats.index}" th:value="${q.getAnswer2()}" th:text="'  ' + ${q.getAnswer2()}"/><br/>
+  					<input type="radio" name="${stats.index}" th:value="${q.getAnswer3()}" th:text="'  ' + ${q.getAnswer3()}"/><br/>
+  					<input type="radio" name="${stats.index}" th:value="${q.getAnswer4()}" th:text="'  ' + ${q.getAnswer4()}"/><br/>					
+       			</div>
+       			<button type="submit" value="Submit">Submit Answers</button>
+    	</form>
+    	
+		</div>	
+			
 	</div>
 
 	

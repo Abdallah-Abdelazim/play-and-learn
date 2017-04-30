@@ -8,11 +8,11 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import play_and_learn.ProjectSweApplication;
 import play_and_learn.model.Course;
 import play_and_learn.model.Game;
 import play_and_learn.service.AuthenticationService;
 import play_and_learn.service.CourseService;
+import play_and_learn.service.UserService;
 
 @Controller
 public class CreateGameController {
@@ -20,6 +20,8 @@ public class CreateGameController {
 	private CourseService courseService;
 	@Autowired
     private AuthenticationService authService;
+	@Autowired
+	private UserService userService;
 	
 	
 	@GetMapping(value = "/creategame")
@@ -37,7 +39,7 @@ public class CreateGameController {
 		
 		Course course = courseService.findByID(courseID);
 		
-		game.setCreatorTeacherUsername(ProjectSweApplication.activeUsername);
+		game.setCreatorTeacherUsername(userService.getLoggedInUser());
 		game.setCourse(course);
 		
 		course.addGame(game);
