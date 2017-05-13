@@ -73,8 +73,7 @@
 					</div>
 					<div class="col-xs-10 text-right menu-1">
 						<ul>
-							<li class="active"><a href="index.html">Home</a></li>
-							<li><a href="about.html">About</a></li>
+							<li class="active"><a href="index.html">Logout</a></li>
 							<li class="has-dropdown">
 								<ul class="dropdown">
 									<li><a href="#">Web Design</a></li>
@@ -95,42 +94,64 @@
 	
 	
 	<div class="container1">
-		<div class="col-xs-2">
-			<div id="fh5co-logo"><i class="icon-study"></i><a href="#" th:text="'  ' + ${game.name}">  name of game </a></div>
-		</div>
-		<br/>
-		<ul>
-  			<li th:text="'Game Description:  ' + ${game.description}">Game Description</li>
-  			<li th:text="'Created by:  ' + ${game.creatorTeacherUsername}">Creator Teacher Username</li>
-  			<li th:text="'Game Type:  ' + ${game.gameType}">Game Type</li>
-  				
-  			<li>Answer The Following Questions:  <br/></li>
-  		</ul>
+			<div class="col-xs-2">
+				<div id="fh5co-logo"><i class="icon-study"></i><a href="#" th:text="'  ' + ${game.name}">  name of game </a></div>
+			</div>
+			<br/>
+			<ul>
+	  			<li th:text="'Game Description:  ' + ${game.description}">Game Description</li>
+	  			<li th:text="'Created by:  ' + ${game.creatorTeacherUsername}">Creator Teacher Username</li>
+	  			<li th:text="'Game Type:  ' + ${game.gameType}">Game Type</li>
+	  			<li th:text="'Game Level:  ' + ${game.gameLevel}">Game Level</li>
+	  				
+	  			<li>Answer The Following Questions:  <br/></li>
+	  		</ul>
+					
+			<form th:if="${game.questions.size()} != 0" action="/game" th:action="@{'/game?courseID='+ ${courseID} + '&amp;gameID=' + ${game.getGameId()}}" th:object="${game}" method="post">
+	       			<div th:each="q , stats : *{questions}">    
+	       				<label th:text="${q.getqBody()}">Question Body </label><br/>					
+	       				<input type="radio" name="${stats.index}" th:value="${q.getAnswer1()}" th:text="'  ' + ${q.getAnswer1()}"/><br/>
+	  					<input type="radio" name="${stats.index}" th:value="${q.getAnswer2()}" th:text="'  ' + ${q.getAnswer2()}"/><br/>
+	  					<input th:if="${game.gameType} == 'mcq'" type="radio" name="${stats.index}" th:value="${q.getAnswer3()}" th:text="'  ' + ${q.getAnswer3()}"/><br/>
+	  					<input th:if="${game.gameType} == 'mcq'" type="radio" name="${stats.index}" th:value="${q.getAnswer4()}" th:text="'  ' + ${q.getAnswer4()}"/><br/>					
+	       			</div>
+	       			<button type="submit" value="Submit">Submit Answers</button>
+	    	</form>
+	    	
+	    	<div th:if="${game.comments.size() > 0}">
+		    	<label>Comments</label> 
+		    	<ul>
+		    		<th:block th:each="comment : ${game.comments}">
+		    			<li>
+		    				<b>By:  <label th:text="${comment.commenterName}">Commenter Name</label></b><br/>
+		    				<label th:text="${comment.commentText}">Comment Text</label>
+		    			</li>   		
+		    		</th:block>
+		    	</ul>   	
+	    	</div>
+	    	
+	    	<div class="container1">
+				<div class="col-xs-2">
+					<hr/><a th:href="'/addcomment?courseID='+ ${courseID} + '&amp;gameID=' + ${game.getGameId()}"><b>Leave a Comment</b></a>
+				</div>
+			</div>
 				
-		<form th:if="${game.questions.size()} != 0" action="/game" th:action="@{'/game?courseID='+ ${courseID} + '&amp;gameID=' + ${game.getGameId()}}" th:object="${game}" method="post">
-       			<div th:each="q , stats : *{questions}">    
-       				<label th:text="${q.getqBody()}">Question Body </label><br/>					
-       				<input type="radio" name="${stats.index}" th:value="${q.getAnswer1()}" th:text="'  ' + ${q.getAnswer1()}"/><br/>
-  					<input type="radio" name="${stats.index}" th:value="${q.getAnswer2()}" th:text="'  ' + ${q.getAnswer2()}"/><br/>
-  					<input type="radio" name="${stats.index}" th:value="${q.getAnswer3()}" th:text="'  ' + ${q.getAnswer3()}"/><br/>
-  					<input type="radio" name="${stats.index}" th:value="${q.getAnswer4()}" th:text="'  ' + ${q.getAnswer4()}"/><br/>					
-       			</div>
-       			<button type="submit" value="Submit">Submit Answers</button>
-    	</form>
-    	
 		</div>	
 			
 	</div>
 
 	
-	<div class="container1">
-		<div class="col-xs-2">
-			<div th:if="${currentLoggedInUser} == ${game.creatorTeacherUsername}">
-				<br/>Manage the Game:  <br/>
-				<a th:href="'/addquestion?courseID='+ ${courseID} + '&amp;gameID=' + ${game.getGameId()}">Add a Question to this game</a>
+
+			<div th:if="${currentLoggedInUser} == ${game.creatorTeacherUsername} or ${currentLoggedInUser} == ${game.gameCollaboratorTeacherUsername}">
+				<hr/>Manage the Game:  <br/>
+				<ol>
+					<li><a th:href="'/addquestion?courseID='+ ${courseID} + '&amp;gameID=' + ${game.getGameId()}">Add a Question to this game</a></li>
+					<li><a th:href="'/editgame?courseID='+ ${courseID} + '&amp;gameID=' + ${game.getGameId()}">Edit this game</a><br/></li>
+					<li><a th:href="'/cancelgame?courseID='+ ${courseID} + '&amp;gameID=' + ${game.getGameId()}">Cancel this game</a><br/></li>
+					<li><a th:href="'/trackgame?courseID='+ ${courseID} + '&amp;gameID=' + ${game.getGameId()}">Track game changes</a><br/></li>
+					<li th:if="${currentLoggedInUser} == ${game.creatorTeacherUsername}"><a th:href="'/addcollaborator?courseID='+ ${courseID} + '&amp;gameID=' + ${game.getGameId()}">Add Game Collaborator</a></li>
+				</ol>
 			</div>
-		</div>
-	</div>
 		   
 	<footer id="fh5co-footer" role="contentinfo" style="background-image: url(images/img_bg_4.jpg);">
 		<div class="overlay"></div>

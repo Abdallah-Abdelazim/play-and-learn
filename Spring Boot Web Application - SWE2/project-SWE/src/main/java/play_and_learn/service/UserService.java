@@ -23,17 +23,13 @@ public class UserService implements IUserService {
     }
     
     @Override
-    public long getNumberOfRecords() {
+    public long getNumberOfRecords() {  // number of users
     	return userRepository.count();
     }
     
     public String getLoggedInUser() {
     	return ProjectSweApplication.activeUsername;
     }
-
-	public String getActiveUsername() {
-		return ProjectSweApplication.activeUsername;
-	}
 
 	public void setActiveUsername(String activeUsername) {
 		ProjectSweApplication.activeUsername = activeUsername;

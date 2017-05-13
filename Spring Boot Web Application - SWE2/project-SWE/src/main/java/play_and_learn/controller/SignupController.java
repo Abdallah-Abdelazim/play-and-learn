@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import play_and_learn.model.User;
-import play_and_learn.service.AuthenticationService;
 import play_and_learn.service.CourseService;
 import play_and_learn.service.UserService;
 import play_and_learn.validator.UserValidator;
@@ -25,8 +24,6 @@ public class SignupController {
 	
 	@Autowired
 	private CourseService courseService;
-	@Autowired
-    private AuthenticationService authService;
 
 	
 	@GetMapping("/signup")

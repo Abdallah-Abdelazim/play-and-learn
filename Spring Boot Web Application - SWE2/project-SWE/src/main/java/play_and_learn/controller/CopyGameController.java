@@ -8,24 +8,26 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import play_and_learn.model.ChosenGameIDRecord;
 import play_and_learn.model.Course;
 import play_and_learn.model.Game;
-import play_and_learn.model.GameFactory;
 import play_and_learn.model.Notification;
 import play_and_learn.model.User;
 import play_and_learn.model.UsernameRecord;
 import play_and_learn.service.CourseService;
+import play_and_learn.service.GameService;
 import play_and_learn.service.UserService;
 
 @Controller
-public class CreateGameController {
+public class CopyGameController {
 	@Autowired
 	private CourseService courseService;
 	@Autowired
 	private UserService userService;
+	@Autowired
+	private GameService gameService;
 	
-	
-	@GetMapping(value = "/creategame")
+	@GetMapping(value = "/copygame")
 	public String openCreateGameForm(@RequestParam(value="courseID", required=true) int courseID
 			, Model model) {
 		
@@ -40,20 +42,26 @@ public class CreateGameController {
 		}
 		
 		model.addAttribute("courseID", courseID);
-		model.addAttribute("game", GameFactory.getGame("Q/A"));
-		return "creategame";
+		model.addAttribute("games", gameService.getAllGames());
+		model.addAttribute("chosenGameID", new ChosenGameIDRecord());
+		return "copygame";
 	}
 	
-	@PostMapping(value = "/creategame")
+	@PostMapping(value = "/copygame")
 	public String createGame(@RequestParam(value="courseID", required=true) int courseID, 
-			@ModelAttribute("game") Game game, Model model) {
+			@ModelAttribute("chosenGameID") ChosenGameIDRecord chosenGameID, Model model) {
 		
 		Course course = courseService.findByID(courseID);
+		Game game = gameService.findByID(Integer.parseInt(chosenGameID.id));
 		
-		game.setCreatorTeacherUsername(userService.getLoggedInUser());
-		game.setCourse(course);
+		Game copiedGame = new Game(game.getName(), game.getDescription()
+				, game.getCreatorTeacherUsername(), game.getGameType(), game.getNumOfQuestions());
+		copiedGame.setNumOfQuestions(game.getNumOfQuestions());
+		copiedGame.setCreatorTeacherUsername(game.getCreatorTeacherUsername());
 		
-		course.addGame(game);
+		copiedGame.setCourse(course);
+		
+		course.addGame(copiedGame);
 		
 		courseService.saveCourse(course);
 		
@@ -75,5 +83,6 @@ public class CreateGameController {
 		
 		return "redirect:/game?courseID=" + courseID + "&gameID=" + course.getCourseGames().get(course.getCourseGames().size()-1).getGameId(); // redirects 
 	}
+
 
 }

@@ -15,8 +15,6 @@ public class HomeController {
 	@RequestMapping(value = {"/", "/index"})
 	public String openHome(Model model) {  // model allows to add attributes for the view
 		
-//		System.out.println(ProjectSweApplication.activeUsername);
-		
 		// implement logout
 		userService.setActiveUsername(null);
 		

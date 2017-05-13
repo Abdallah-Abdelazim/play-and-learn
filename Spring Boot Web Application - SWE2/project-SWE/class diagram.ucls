@@ -3,69 +3,76 @@
   realizations="true" associations="true" dependencies="true" nesting-relationships="true" router="FAN">  
   <package id="1" language="java" name="play_and_learn" project="project-SWE" 
     file="/project-SWE/src/main/java/play_and_learn" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="196" y="51"/>    
+    <position height="-1" width="-1" x="308" y="415"/>    
     <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
   </package>  
-  <package id="2" language="java" name="play_and_learn.controller" project="project-SWE" 
-    file="/project-SWE/src/main/java/play_and_learn/controller" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="192" y="201"/>    
+  <package id="2" language="java" name="play_and_learn.service" project="project-SWE" 
+    file="/project-SWE/src/main/java/play_and_learn/service" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="605" y="270"/>    
     <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
   </package>  
   <package id="3" language="java" name="play_and_learn.model" project="project-SWE" 
     file="/project-SWE/src/main/java/play_and_learn/model" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="284" y="422"/>    
+    <position height="-1" width="-1" x="804" y="532"/>    
     <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
   </package>  
   <package id="4" language="java" name="play_and_learn.repository" project="project-SWE" 
     file="/project-SWE/src/main/java/play_and_learn/repository" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="762" y="432"/>    
+    <position height="-1" width="-1" x="633" y="405"/>    
     <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
   </package>  
-  <package id="5" language="java" name="play_and_learn.service" project="project-SWE" 
-    file="/project-SWE/src/main/java/play_and_learn/service" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="949" y="229"/>    
+  <package id="5" language="java" name="play_and_learn.controller" project="project-SWE" 
+    file="/project-SWE/src/main/java/play_and_learn/controller" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="671" y="87"/>    
     <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
   </package>  
   <package id="6" language="java" name="play_and_learn.validator" project="project-SWE" 
     file="/project-SWE/src/main/java/play_and_learn/validator" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="62" width="238" x="516" y="43"/>    
+    <position height="-1" width="-1" x="257" y="163"/>    
     <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
   </package>  
   <dependency id="7">    
-    <end type="SOURCE" refId="2"/>    
-    <end type="TARGET" refId="6"/>  
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="2"/>  
   </dependency>  
   <dependency id="8">    
-    <end type="SOURCE" refId="2"/>    
-    <end type="TARGET" refId="3"/>  
+    <bendpoint x="644" y="210"/>    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="2"/>  
   </dependency>  
   <dependency id="9">    
-    <end type="SOURCE" refId="4"/>    
+    <bendpoint x="892" y="210"/>    
+    <bendpoint x="892" y="312"/>    
+    <bendpoint x="892" y="414"/>    
+    <end type="SOURCE" refId="5"/>    
     <end type="TARGET" refId="3"/>  
   </dependency>  
   <dependency id="10">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="3"/>  
+  </dependency>  
+  <dependency id="11">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="6"/>  
+  </dependency>  
+  <dependency id="12">    
     <end type="SOURCE" refId="2"/>    
     <end type="TARGET" refId="1"/>  
   </dependency>  
-  <dependency id="11">    
-    <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="5"/>  
-  </dependency>  
-  <dependency id="12">    
-    <end type="SOURCE" refId="6"/>    
+  <dependency id="13">    
+    <bendpoint x="871" y="414"/>    
+    <end type="SOURCE" refId="2"/>    
     <end type="TARGET" refId="3"/>  
   </dependency>  
-  <dependency id="13">    
-    <end type="SOURCE" refId="5"/>    
-    <end type="TARGET" refId="4"/>  
-  </dependency>  
   <dependency id="14">    
-    <end type="SOURCE" refId="5"/>    
+    <bendpoint x="361" y="312"/>    
+    <bendpoint x="361" y="414"/>    
+    <end type="SOURCE" refId="6"/>    
     <end type="TARGET" refId="3"/>  
   </dependency>  
   <dependency id="15">    
     <end type="SOURCE" refId="2"/>    
-    <end type="TARGET" refId="5"/>  
+    <end type="TARGET" refId="4"/>  
   </dependency>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    

@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+	<meta charset="utf-8"/>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Copy a Game</title>	
+		
+		
+
+		<!-- Icomoon Icon Fonts-->
+		<link rel="stylesheet" href="css/icomoon.css"/>
+
+		<!-- Magnific Popup -->
+		<link rel="stylesheet" href="css/magnific-popup.css"/>
+		
+		<link rel = "stylesheet" type = "text/css" href = "css/form-style.css" />
+
+		<!-- Theme style  -->
+		<link rel="stylesheet" href="css/style.css"/>
+
+	</head>
+	
+	<body>
+
+		<nav class="fh5co-nav" role="navigation">
+			<div class="top-menu">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-2">
+							<div id="fh5co-logo"><a href="#"><i class="icon-study"></i>Play &amp; Learn<span>.</span></a></div>
+						</div>
+					</div>
+				
+				</div>
+			</div>
+		</nav>
+		
+		<h1>Choose a game to copy to your game:  </h1>
+		<form action="/copygame.html" th:action="@{/copygame(courseID=${courseID})}" th:object="${chosenGameID}" method="post">
+		  <div class="container">
+		  	<div th:each="game: ${games}">
+		  		<input type="radio" th:field="*{id}" th:name="g" th:value="${game.getGameId()}" th:text="${game.getName()}"/>
+		    </div>
+		    <button id="button" type="submit">Copy Game</button><br/>
+		  </div>
+		</form>
+		
+	</body>
+	
+</html>

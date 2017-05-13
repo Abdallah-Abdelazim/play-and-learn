@@ -18,6 +18,9 @@ public class Course {
 	@OneToMany(targetEntity = Game.class, mappedBy = "course", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	private List<Game> courseGames;
 	
+	@OneToMany(targetEntity = UsernameRecord.class, mappedBy = "course", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	private List<UsernameRecord> notifiedUsers;  // users to be notified when a new game is added here
+	
 	public Course(String courseName, String courseDescription
 			, String creatorTeacherUsername, List<Game> courseGames) {
 		super();
@@ -103,7 +106,17 @@ public class Course {
 		return null;
 	}
 	
-	
+	public void addNotifiedUser(UsernameRecord usernameRecord) {
+		this.notifiedUsers.add(usernameRecord);
+	}
+
+	public List<UsernameRecord> getNotifiedUsers() {
+		return notifiedUsers;
+	}
+
+	public void setNotifiedUsers(List<UsernameRecord> notifiedUsers) {
+		this.notifiedUsers = notifiedUsers;
+	}
 
 	@Override
 	public String toString() {

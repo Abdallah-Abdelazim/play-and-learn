@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+	<meta charset="utf-8"/>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Add a Comment</title>	
+		
+		
+
+		<!-- Icomoon Icon Fonts-->
+		<link rel="stylesheet" href="css/icomoon.css"/>
+
+		<!-- Magnific Popup -->
+		<link rel="stylesheet" href="css/magnific-popup.css"/>
+		
+		<link rel = "stylesheet" type = "text/css" href = "css/form-style.css" />
+
+		<!-- Theme style  -->
+		<link rel="stylesheet" href="css/style.css"/>
+
+	</head>
+	
+	<body>
+
+		<nav class="fh5co-nav" role="navigation">
+			<div class="top-menu">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-2">
+							<div id="fh5co-logo"><a href="#"><i class="icon-study"></i>Play &amp; Learn<span>.</span></a></div>
+						</div>
+					</div>
+				
+				</div>
+			</div>
+		</nav>
+		
+		<h1>Add a Comment</h1>
+		<form action="/addcomment.html" th:action="@{/addcomment(courseID=${courseID}, gameID=${gameID})}" th:object="${comment}" method="post">
+		  <div class="container">  
+		    	<label><b>Comment</b></label>
+		    	<input id="textbox" type="text" th:field="*{commentText}" placeholder="Enter your comment here" name="commentBody" /><br/>
+		    		
+		    	<button id="button" type="submit">Add Comment</button><br/>
+		  </div>
+		</form>
+		
+	</body>
+	
+</html>

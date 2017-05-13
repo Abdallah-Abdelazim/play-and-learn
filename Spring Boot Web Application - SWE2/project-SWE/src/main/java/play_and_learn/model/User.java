@@ -1,5 +1,7 @@
 package play_and_learn.model;
 
+import java.util.List;
+
 import javax.persistence.*;
 
 @Entity
@@ -15,6 +17,9 @@ public class User {
 	protected Integer age ;
 	protected String gender;
 	protected String role; // student or teacher
+	
+	@OneToMany(targetEntity = Notification.class, mappedBy = "user", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	List<Notification> notifications;
 	
 	
 	public User(String username, String name
@@ -130,5 +135,17 @@ public class User {
 
 	public void setRole(String role) {
 		this.role = role;
+	}
+
+	public List<Notification> getNotifications() {
+		return notifications;
+	}
+
+	public void setNotifications(List<Notification> notifications) {
+		this.notifications = notifications;
+	}
+	
+	public void addNotification(Notification notification) {
+		this.notifications.add(notification);
 	}
 }

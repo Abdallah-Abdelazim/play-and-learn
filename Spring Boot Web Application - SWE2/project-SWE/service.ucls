@@ -4,66 +4,75 @@
   <class id="1" language="java" name="play_and_learn.service.AuthenticationService" project="project-SWE" 
     file="/project-SWE/src/main/java/play_and_learn/service/AuthenticationService.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="116" width="251" x="596" y="154"/>    
+    <position height="-1" width="-1" x="860" y="224"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="2" language="java" name="play_and_learn.service.CourseService" project="project-SWE" 
+  <class id="2" language="java" name="play_and_learn.service.GameService" project="project-SWE" 
+    file="/project-SWE/src/main/java/play_and_learn/service/GameService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="452" y="514"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="play_and_learn.service.CourseService" project="project-SWE" 
     file="/project-SWE/src/main/java/play_and_learn/service/CourseService.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="236" width="282" x="274" y="154"/>    
+    <position height="-1" width="-1" x="554" y="284"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="3" language="java" name="play_and_learn.service.UserService" project="project-SWE" 
+  <class id="4" language="java" name="play_and_learn.service.UserService" project="project-SWE" 
     file="/project-SWE/src/main/java/play_and_learn/service/UserService.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="176" width="247" x="887" y="154"/>    
+    <position height="-1" width="-1" x="1149" y="274"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="4" language="java" name="play_and_learn.service.IAuthenticationService" project="project-SWE" 
+  <interface id="5" language="java" name="play_and_learn.service.IAuthenticationService" project="project-SWE" 
     file="/project-SWE/src/main/java/play_and_learn/service/IAuthenticationService.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="96" width="251" x="596" y="430"/>    
+    <position height="-1" width="-1" x="785" y="511"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <interface id="5" language="java" name="play_and_learn.service.IUserService" project="project-SWE" 
+  <interface id="6" language="java" name="play_and_learn.service.IUserService" project="project-SWE" 
     file="/project-SWE/src/main/java/play_and_learn/service/IUserService.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="136" width="229" x="887" y="430"/>    
+    <position height="-1" width="-1" x="1080" y="546"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <realization id="6">    
-    <end type="SOURCE" refId="1"/>    
-    <end type="TARGET" refId="4"/>  
-  </realization>  
-  <realization id="7">    
-    <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="5"/>  
-  </realization>  
-  <association id="8">    
+  <association id="7">    
     <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="9" name="userService"/>      
-      <multiplicity id="10" minimum="0" maximum="1"/>    
+      <attribute id="8" name="userService"/>      
+      <multiplicity id="9" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="5" navigable="true"/>    
+    <end type="TARGET" refId="6" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
+  <realization id="10">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="6"/>  
+  </realization>  
+  <realization id="11">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="5"/>  
+  </realization>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    

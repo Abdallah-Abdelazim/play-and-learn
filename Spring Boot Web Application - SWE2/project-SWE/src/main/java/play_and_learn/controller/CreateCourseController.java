@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import play_and_learn.model.Course;
-import play_and_learn.service.AuthenticationService;
 import play_and_learn.service.CourseService;
 import play_and_learn.service.UserService;
 
@@ -17,18 +16,20 @@ public class CreateCourseController {
 	@Autowired
 	private CourseService courseService;
 	@Autowired
-    private AuthenticationService authService;
-	@Autowired
 	private UserService userService;
 	
 	@GetMapping("/createcourse")
 	public String openCreateGame(Model model) {	
 		
-		// check if there is no logged in user
+		// check if there is no logged in user & the user must be a teacher
 		if (userService.getLoggedInUser() ==null) {
 			model.addAttribute("error", "Please create a teacher account then log in using it.");
 			return "unauthorized-access";
 		}		
+		else if (!(userService.findByUsername(userService.getLoggedInUser()).getRole().equals("teacher"))) {
+			model.addAttribute("error", "You must be a teacher to enter this page.");
+			return "unauthorized-access";
+		}
 		
 		model.addAttribute("course", new Course());
 		return "createcourse";

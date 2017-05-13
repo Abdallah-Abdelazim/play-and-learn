@@ -3,7 +3,7 @@
 	<head>
 	<meta charset="utf-8"/>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<title>Create a Game</title>	
+		<title>Edit Game</title>	
 		
 		
 
@@ -35,27 +35,36 @@
 			</div>
 		</nav>
 		
-		<h1>Add a New Game</h1>
-		<form action="/creategame.html" th:action="@{/creategame(courseID=${courseID})}" th:object="${game}" method="post">
+		<h1>Edit Game</h1>
+		<form action="/editgame.html" th:action="@{/editgame(courseID=${courseID}, gameID=${gameID})}" th:object="${game}" method="post">
 		  <div class="container">
 		  	
-		  
-		    <label><b>Game Name</b></label>
+		  	<h1>Leave the field empty if you don't want to change it.</h1>
+		    <label><b>New Game Name</b></label>
 		    <input type="text" th:field="*{name}" placeholder="Enter the Game Name" name="gameName" /><br/>
-		    <label><b>Game Description</b></label>
+		    <label><b>New Game Description</b></label>
 		    <input id="textbox" type="text" th:field="*{description}" placeholder="Enter a Brief Description" name="gameDescription" /><br/>
-		    <label><b>Game Type</b></label>		    
+		    <label><b>New Game Type</b></label>		    
 		    <input type="radio" th:field="*{gameType}" name="gameType" value="tf"/> True &amp; False
   			<input type="radio" th:field="*{gameType}" name="gameType" value="mcq"/> MCQ
   			<br /><br />
-  			<label><b>Game Level</b></label>
+  			<label><b>New Game Level</b></label>
 		    <input id="textbox" type="text" th:field="*{gameLevel}" placeholder="easy, hard, challenging, ..." name="gameLevel" /><br/>
   			<label><b>Number of Questions in the game</b></label>
 		    <input id="textbox" type="text" th:field="*{numOfQuestions}" placeholder="Enter the Number of Questions in that Game" name="numOfQuestions" /><br/>
+		    
 		    		
-		    <button id="button" type="submit">Add Game</button><br/>
+		    <button id="button" type="submit">Edit Game</button><br/>
 		  </div>
 		</form>
+		
+		<div class="container1">
+			<div class="col-xs-2">
+				<br/><h1>Do More</h1>
+				<h1><a th:href="'/addquestion?courseID='+ ${courseID} + '&amp;gameID=' + ${gameID}">Add a Question to this game</a><br/></h1>
+				<h1><a th:href="'/deletequestion?courseID='+ ${courseID} + '&amp;gameID=' + ${gameID}">Delete Question from this game</a></h1>
+			</div>
+		</div>
 		
 	</body>
 	

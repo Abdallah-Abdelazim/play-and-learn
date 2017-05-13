@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+	<meta charset="utf-8"/>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title th:text="'Game Changes - ' + ${game.name}">Game Changes</title>	
+		
+		
+
+		<!-- Icomoon Icon Fonts-->
+		<link rel="stylesheet" href="css/icomoon.css"/>
+
+		<!-- Magnific Popup -->
+		<link rel="stylesheet" href="css/magnific-popup.css"/>
+		
+		<link rel = "stylesheet" type = "text/css" href = "css/form-style.css" />
+
+		<!-- Theme style  -->
+		<link rel="stylesheet" href="css/style.css"/>
+
+	</head>
+	
+	<body>
+
+		<nav class="fh5co-nav" role="navigation">
+			<div class="top-menu">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-2">
+							<div id="fh5co-logo"><a href="#"><i class="icon-study"></i>Play &amp; Learn<span>.</span></a></div>
+						</div>
+					</div>
+				
+				</div>
+			</div>
+		</nav>
+		
+		<h1 th:text="'Game Change - ' + ${game.name}">Game changes</h1>
+		  <div class="container">
+		  	<ol>
+		  		<th:block  th:each="gameChange : ${game.getGameChanges()}" >
+		  			<li>
+		  				<label th:text="' Change Type: ' + ${gameChange.gameChangeType} + ' - By:  ' + ${gameChange.changerTeacherUsername}">change text</label>
+		  				<a href="undo.html" th:href="'/undo?courseID='+ ${courseID} + '&amp;gameID=' + ${game.getGameId()}" >undo</a>
+		  			</li>
+		  		</th:block>
+		  	</ol>
+		  </div>
+		
+	</body>
+	
+</html>

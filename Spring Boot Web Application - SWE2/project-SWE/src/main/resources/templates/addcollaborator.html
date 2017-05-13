@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+	<meta charset="utf-8"/>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Add Game Collaborator</title>	
+		
+		
+
+		<!-- Icomoon Icon Fonts-->
+		<link rel="stylesheet" href="css/icomoon.css"/>
+
+		<!-- Magnific Popup -->
+		<link rel="stylesheet" href="css/magnific-popup.css"/>
+		
+		<link rel = "stylesheet" type = "text/css" href = "css/form-style.css" />
+
+		<!-- Theme style  -->
+		<link rel="stylesheet" href="css/style.css"/>
+
+	</head>
+	
+	<body>
+
+		<nav class="fh5co-nav" role="navigation">
+			<div class="top-menu">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-2">
+							<div id="fh5co-logo"><a href="#"><i class="icon-study"></i>Play &amp; Learn<span>.</span></a></div>
+						</div>
+					</div>
+				
+				</div>
+			</div>
+		</nav>
+		
+		<h1>Add Collaborator to this Game</h1>
+		<form action="/addcollaborator.html" th:action="@{/addcollaborator(courseID=${courseID}, gameID=${gameID})}" th:object="${collaboratorTeacher}" method="post">
+		  <div class="container">
+		  	
+		  	<h1>Enter the username of the teacher you want to make as a collaborator</h1>
+		    <label><b>Game Collaborator Teacher Username</b></label>
+		    <input type="text" th:field="*{username}" placeholder="Enter the collaborator username" name="collaboratorTeacherUsername" /><br/>
+		    		
+		    <button id="button" type="submit">Add Game Collaborator</button><br/>
+		  </div>
+		</form>
+		
+	</body>
+	
+</html>
