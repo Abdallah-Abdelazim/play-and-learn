@@ -47,7 +47,7 @@ public class AddGameCollaboratorController {
 		return "addcollaborator";
 	}
 	
-	@PostMapping
+	@PostMapping("/addcollaborator")
 	public String addCollaborator(@RequestParam(value="courseID", required=true) int courseID
 			, @RequestParam(value="gameID", required=true) int gameID
 			, @ModelAttribute("collaboratorTeacher") User collaboratorTeacher

@@ -35,7 +35,7 @@
 			</div>
 		</nav>
 		
-		<h1>Choose a game to copy to your game:  </h1>
+		<h1>Choose a game to copy to your course:  </h1>
 		<form action="/copygame.html" th:action="@{/copygame(courseID=${courseID})}" th:object="${chosenGameID}" method="post">
 		  <div class="container">
 		  	<div th:each="game: ${games}">

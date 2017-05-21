@@ -84,5 +84,41 @@ public class EditGameController {
 	
 		return "redirect:/game?courseID=" + courseID + "&gameID=" + gameID; // redirects
 	}
+	
+	@GetMapping("/deletequestion")
+	public String openDeleteQuestionPage(@RequestParam(value="courseID", required=true) int courseID
+			, @RequestParam(value="gameID", required=true) int gameID, Model model) {
+		
+		// check if there is no logged in user & the user must be a teacher
+		if (userService.getLoggedInUser() ==null) {
+			model.addAttribute("error", "Please log in first.");
+			return "unauthorized-access";
+		}
+		else if ( !(  (userService.getLoggedInUser().equals( ( gameService.findByID(gameID) ).getCreatorTeacherUsername() ) || (userService.getLoggedInUser().equals( ( gameService.findByID(gameID) ).getGameCollaboratorTeacherUsername())) ) ) ) {
+			// the current user neither created the game nor is a collaborator
+			model.addAttribute("error", "You must be either a creator of the game or a collaborator in order to be able to edit it.");
+			return "unauthorized-access";
+		}
+		
+		
+		model.addAttribute("courseID", courseID);
+		model.addAttribute("gameID", gameID);
+		
+		// TODO make it ready for deletequestion template
+		
+		return "deletequestion";			
+		
+	}
+	
+	
+	@PostMapping("/deletequestion")
+	public String deleteQuestion(@RequestParam(value="courseID", required=true) int courseID
+			, @RequestParam(value="gameID", required=true) int gameID, Model model) {
+		
+		// TODO delete the question
+		
+		return "redirect:/game?courseID=" + courseID + "&gameID=" + gameID; // redirects
+		
+	}
 
 }

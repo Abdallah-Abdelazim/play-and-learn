@@ -1,57 +1,49 @@
+
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 	<head>
-	<meta charset="utf-8"/>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-	<title>Play &amp; Learn - Notifications</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1"/>
-
-
-  	<!-- Facebook and Twitter integration -->
-	<meta property="og:title" content=""/>
-	<meta property="og:image" content=""/>
-	<meta property="og:url" content=""/>
-	<meta property="og:site_name" content=""/>
-	<meta property="og:description" content=""/>
-	<meta name="twitter:title" content="" />
-	<meta name="twitter:image" content="" />
-	<meta name="twitter:url" content="" />
-	<meta name="twitter:card" content="" />
-
-	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet"/>
-	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400" rel="stylesheet"/>
 	
-	<!-- Animate.css -->
-	<link rel="stylesheet" href="css/animate.css"/>
-	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="css/icomoon.css"/>
-	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="css/bootstrap.css"/>
-
-	<!-- Magnific Popup -->
-	<link rel="stylesheet" href="css/magnific-popup.css"/>
-
-	<!-- Owl Carousel  -->
-	<link rel="stylesheet" href="css/owl.carousel.min.css"/>
-	<link rel="stylesheet" href="css/owl.theme.default.min.css"/>
-
-	<!-- Flexslider  -->
-	<link rel="stylesheet" href="css/flexslider.css"/>
-
-	<!-- Pricing -->
-	<link rel="stylesheet" href="css/pricing.css"/>
-
-	<!-- Theme style  -->
-	<link rel="stylesheet" href="css/style.css"/>
-
-	<!-- Modernizr JS -->
-	<script src="js/modernizr-2.6.2.min.js"></script>
-	<!-- FOR IE9 below -->
-	<!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
-
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<title>Your Result</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	
+		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet"/>
+		<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400" rel="stylesheet"/>
+		
+		<!-- Animate.css -->
+		<link rel="stylesheet" href="css/animate.css" th:href="@{css/animate.css}"/>
+		<!-- Icomoon Icon Fonts-->
+		<link rel="stylesheet" href="css/icomoon.css" th:href="@{css/icomoon.css}"/>
+		<!-- Bootstrap  -->
+		<link rel="stylesheet" href="css/bootstrap.css" th:href="@{css/bootstrap.css}"/>
+	
+		<!-- Magnific Popup -->
+		<link rel="stylesheet" href="css/magnific-popup.css" th:href="@{css/magnific-popup.css}"/>
+	
+		<!-- Owl Carousel  -->
+		<link rel="stylesheet" href="css/owl.carousel.min.css" th:href="@{css/owl.carousel.min.css}"/>
+		<link rel="stylesheet" href="css/owl.theme.default.min.css" th:href="@{css/owl.theme.default.min.css}"/>
+	
+		<!-- Flexslider  -->
+		<link rel="stylesheet" href="css/flexslider.css" th:href="@{css/flexslider.css}"/>
+	
+		<!-- Pricing -->
+		<link rel="stylesheet" href="css/pricing.css" th:href="@{css/pricing.css}"/>
+	
+		<!-- Theme style  -->
+		<link rel="stylesheet" href="css/style.css" th:href="@{css/style.css}"/>
+		
+		<link rel = "stylesheet" type = "text/css" href = "css/form-style.css" />
+	
+		<!-- Modernizr JS -->
+		<script src="js/modernizr-2.6.2.min.js"></script>
+		<!-- FOR IE9 below -->
+		<!--[if lt IE 9]>
+		<script src="js/respond.min.js"></script>
+		<![endif]-->
 	</head>
+	
 	<body>
 		
 	<div class="fh5co-loader"></div>
@@ -77,12 +69,22 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-2">
-						<div id="fh5co-logo"><a href="index.html"><i class="icon-study"></i>Play &amp; Learn<span>.</span></a></div>
+						<div id="fh5co-logo"><a href="index.html"><i class="icon-study"></i>Play &amp; Learn</a></div>
 					</div>
 					<div class="col-xs-10 text-right menu-1">
 						<ul>
 							<li><a href="welcome" th:href="@{/welcome}">Home</a></li>
 							<li class="active"><a href="index" th:href="@{/}">Logout</a></li>
+							<li class="has-dropdown">
+								<ul class="dropdown">
+									<li><a href="#">Web Design</a></li>
+									<li><a href="#">eCommerce</a></li>
+									<li><a href="#">Branding</a></li>
+									<li><a href="#">API</a></li>
+								</ul>
+							</li>
+							
+							
 						</ul>
 					</div>
 				</div>
@@ -91,13 +93,27 @@
 		</div>
 	</nav>
 	
+	
+	<div class="container1">
+			<div class="col-xs-2">
+				<label>You Scored:  <b th:text="${result} + '/' + ${total}">score</b></label>
+				<a href="course" th:href="@{'/course?courseID=' + ${courseID}}">Return to Course Page</a>
+			</div>			
+	</div>
 
-	<h1>Your Notifications</h1>
-	<ol>			   					
-		<li th:each="notification: ${notifications}" th:text="${notification.notificationText + ' - on: ' + notification.date}">Notification</li>
-	</ol>
-			   				
+	
 
+			<div th:if="${currentLoggedInUser} == ${game.creatorTeacherUsername} or ${currentLoggedInUser} == ${game.gameCollaboratorTeacherUsername}">
+				<hr/>Manage the Game:  <br/>
+				<ol>
+					<li><a th:href="'/addquestion?courseID='+ ${courseID} + '&amp;gameID=' + ${game.getGameId()}">Add a Question to this game</a></li>
+					<li><a th:href="'/editgame?courseID='+ ${courseID} + '&amp;gameID=' + ${game.getGameId()}">Edit this game</a><br/></li>
+					<li><a th:href="'/cancelgame?courseID='+ ${courseID} + '&amp;gameID=' + ${game.getGameId()}">Cancel this game</a><br/></li>
+					<li><a th:href="'/trackgame?courseID='+ ${courseID} + '&amp;gameID=' + ${game.getGameId()}">Track game changes</a><br/></li>
+					<li th:if="${currentLoggedInUser} == ${game.creatorTeacherUsername}"><a th:href="'/addcollaborator?courseID='+ ${courseID} + '&amp;gameID=' + ${game.getGameId()}">Add Game Collaborator</a></li>
+				</ol>
+			</div>
+		   
 	<footer id="fh5co-footer" role="contentinfo" style="background-image: url(images/img_bg_4.jpg);">
 		<div class="overlay"></div>
 		<div class="container">
@@ -161,7 +177,6 @@
 
 		</div>
 	</footer>
-	</div>
 
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>

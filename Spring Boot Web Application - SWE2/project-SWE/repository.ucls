@@ -5,7 +5,7 @@
   <interface id="1" language="java" name="play_and_learn.repository.CourseRepository" project="project-SWE" 
     file="/project-SWE/src/main/java/play_and_learn/repository/CourseRepository.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="136" width="268" x="401" y="236"/>    
+    <position height="-1" width="-1" x="306" y="288"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -14,7 +14,7 @@
   </interface>  
   <interface id="2" language="java" name="play_and_learn.repository.UserRepository" project="project-SWE" 
     file="/project-SWE/src/main/java/play_and_learn/repository/UserRepository.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="96" width="229" x="709" y="236"/>    
+    <position height="-1" width="-1" x="605" y="288"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -23,7 +23,7 @@
   </interface>  
   <interface id="3" language="java" name="play_and_learn.repository.GameRepository" project="project-SWE" 
     file="/project-SWE/src/main/java/play_and_learn/repository/GameRepository.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="116" width="200" x="978" y="236"/>    
+    <position height="-1" width="-1" x="872" y="290"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      

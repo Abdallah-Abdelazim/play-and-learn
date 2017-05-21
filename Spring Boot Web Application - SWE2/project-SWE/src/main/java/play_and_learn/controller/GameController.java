@@ -53,7 +53,8 @@ public class GameController {
 	
 	@PostMapping("/game")
 	String evaluateUserAnswers(@RequestParam(value="courseID", required=true) int courseID
-			, @RequestParam(value="gameID", required=true) int gameID, Model model) {
+			, @RequestParam(value="gameID", required=true) int gameID
+			, Model model) {
 		
 		Course course = courseService.findByID(courseID);
 		IGame game = course.getGameByID(gameID);

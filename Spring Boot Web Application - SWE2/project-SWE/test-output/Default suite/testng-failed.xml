@@ -3,16 +3,17 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)" preserve-order="true">
     <classes>
-      <class name="play_and_learn.Testcourse">
+      <class name="play_and_learn.TestAccount">
         <methods>
           <include name="springTestContextBeforeTestClass"/>
           <include name="springTestContextPrepareTestInstance"/>
           <include name="springTestContextAfterTestClass"/>
-          <include name="f1" invocation-numbers="0 1 2 3"/>
+          <include name="f2" invocation-numbers="0 1 2 4 5"/>
           <include name="springTestContextBeforeTestMethod"/>
+          <include name="f1" invocation-numbers="0 1 2 3"/>
           <include name="springTestContextAfterTestMethod"/>
         </methods>
-      </class> <!-- play_and_learn.Testcourse -->
+      </class> <!-- play_and_learn.TestAccount -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

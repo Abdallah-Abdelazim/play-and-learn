@@ -14,7 +14,7 @@ public class User {
 	protected String name;
 	protected String password;
 	protected String email;
-	protected Integer age ;
+	protected String age ;
 	protected String gender;
 	protected String role; // student or teacher
 	
@@ -23,7 +23,7 @@ public class User {
 	
 	
 	public User(String username, String name
-			, String password, String email, int age, String gender, String role) {
+			, String password, String email, String age, String gender, String role) {
 		super();
 		this.username = username;
 		this.name = name;
@@ -40,7 +40,7 @@ public class User {
 		this.name = "";
 		this.password = "";
 		this.email = "";
-		this.age = 0;
+		this.age = "";
 		this.gender = "";
 		this.role = "";
 	}
@@ -51,7 +51,7 @@ public class User {
 		this.name = "";
 		this.password = password;
 		this.email = "";
-		this.age = 0;
+		this.age = "";
 		this.gender = "";
 		this.role = "";
 	}
@@ -64,10 +64,6 @@ public class User {
 
 	public void setId(Integer id) {
 		this.id = id;
-	}
-
-	public void setAge(Integer age) {
-		this.age = age;
 	}
 
 	public String getUsername() {
@@ -110,12 +106,12 @@ public class User {
 	}
 
 
-	public int getAge() {
+	public String getAge() {
 		return age;
 	}
 
 
-	public void setAge(int age) {
+	public void setAge(String age) {
 		this.age = age;
 	}
 

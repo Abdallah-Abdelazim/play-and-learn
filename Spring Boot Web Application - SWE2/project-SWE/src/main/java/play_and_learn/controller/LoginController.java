@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import play_and_learn.model.User;
 import play_and_learn.service.AuthenticationService;
-import play_and_learn.service.CourseService;
 import play_and_learn.service.UserService;
 
 @Controller
@@ -18,8 +17,6 @@ public class LoginController {
     private AuthenticationService authService;
 	@Autowired
 	private UserService userService;
-	@Autowired
-	private CourseService courseService;
 	
 	@GetMapping("/login")
 	public String openLogin(Model model) {
@@ -34,12 +31,8 @@ public class LoginController {
 			
 			userService.setActiveUsername(user.getUsername());
 			
-			user = userService.findByUsername(user.getUsername());
-			model.addAttribute("user", new User(user.getUsername(), user.getName(), 
-					user.getPassword(), user.getEmail(), user.getAge(), user.getGender()
-					, user.getRole()));
-			model.addAttribute("courses", courseService.getAllCourses());
-			return "welcome";
+			
+			return "redirect:/welcome";  // redirect to user page
 		}
 		else {
 			model.addAttribute("error", "Username or Password is Incorrect");

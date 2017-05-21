@@ -18,7 +18,7 @@ public class Game implements IGame{  // QAGame
     private String gameLevel;  // easy, hard, challenging
     private String gameCollaboratorTeacherUsername;  // another teacher who can edit this game
     
-    private  int numOfQuestions = 0;
+    private  int numOfQuestions;
     
     private boolean cancelled;   // cancel flag
     
@@ -40,7 +40,7 @@ public class Game implements IGame{  // QAGame
         description="";
         creatorTeacherUsername = "";
         gameType = "";
-        numOfQuestions = 0;
+        numOfQuestions = 4;
         questions = new ArrayList<>();
         cancelled = false;
     }

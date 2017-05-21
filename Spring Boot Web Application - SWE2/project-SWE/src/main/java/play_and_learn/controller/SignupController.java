@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import play_and_learn.model.User;
-import play_and_learn.service.CourseService;
 import play_and_learn.service.UserService;
 import play_and_learn.validator.UserValidator;
 
@@ -21,9 +20,6 @@ public class SignupController {
 	
 	@Autowired
     private UserService userService;
-	
-	@Autowired
-	private CourseService courseService;
 
 	
 	@GetMapping("/signup")
@@ -46,10 +42,8 @@ public class SignupController {
         userService.save(user);
 		
         userService.setActiveUsername(user.getUsername());
-		
-		model.addAttribute("courses", courseService.getAllCourses());
         
-        return "welcome";
+        return "redirect:/welcome";
     }
 	
 	

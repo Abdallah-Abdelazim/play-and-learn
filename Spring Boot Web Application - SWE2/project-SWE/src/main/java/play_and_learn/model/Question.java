@@ -8,6 +8,10 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+/**
+ * @author abdal
+ *
+ */
 @Entity
 @Table(name = "questions")
 public class Question {
@@ -47,10 +51,8 @@ public class Question {
 		this.answer3 = "";
 		this.answer4 = "";
 		this.theRighAnswer = "";
-	}
+	}	
 
-	
-	
 	public int getQ_id() {
 		return q_id;
 	}
