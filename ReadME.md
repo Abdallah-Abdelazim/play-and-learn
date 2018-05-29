@@ -3,5 +3,5 @@ Play & Learn is a Game-based Educational Platform. This platform will help stude
 
 This Repository contains the Software Engineering-1 course project (desktop application using Java & javaFX) as well as the Software Engineering-2 course project (the website version using Spring-boot).  
 
-**Desktop Application (SWE-1):** https://abdallah-abdelazim.github.io/Game-based-Educational-Platform/  
+**Desktop Application (SWE-1):** https://abdallah-abdelazim.github.io/Play-and-Learn/  
 **Website (SWE-2):** https://playandlearn.herokuapp.com/  
